@@ -85,7 +85,7 @@ Die Dateien enthalten ausschliesslich Textdaten und werden nicht ausgeführt ode
 
 ## Inspirationsbibliothek
 
-Unter `#inspiration` ergänzt eine frei zugängliche Materialbibliothek die fünf Lernstationen, ohne den Fortschritt oder die ursprüngliche Zeitplanung zu verändern. Sie umfasst zwölf Gedichtkarten aus dem bereitgestellten Buch, sechzehn konkrete Medien-/Quellenkarten und fünf poetologische Themenwege. Suche, Themen-/Medienfilter, lokale Merkliste und quellenspezifische Notizen unterstützen selbstständiges Arbeiten. Schreibimpulse können in die Werkstatt übernommen werden; passende Beispielgrammatiken werden dort vorausgewählt, ohne eigene Regeln zu überschreiben.
+Unter `#inspiration` ergänzt eine frei zugängliche Materialbibliothek die fünf Lernstationen, ohne den Fortschritt oder die ursprüngliche Zeitplanung zu verändern. Sie umfasst zwölf Gedichtkarten aus dem bereitgestellten Buch, einundzwanzig konkrete Medien-/Quellenkarten und fünf poetologische Themenwege. Suche, Themen-/Medienfilter, lokale Merkliste und quellenspezifische Notizen unterstützen selbstständiges Arbeiten. Schreibimpulse können in die Werkstatt übernommen werden; passende Beispielgrammatiken werden dort vorausgewählt, ohne eigene Regeln zu überschreiben.
 
 Die Textkarten unterscheiden kurze Volltexte, Haupttext ohne PS und Auszüge. Jede hat eine PDF-Dateiseite, eine ausdrücklich als möglich gekennzeichnete Deutung und einen Arbeitsauftrag. Für das vollständige Buch können Lernende ihre eigene Datei lokal öffnen: Sie wird über eine temporäre Blob-URL im PDF-Viewer dieses Tabs angezeigt, nicht hochgeladen und nicht im Lernjournal gespeichert. Die Seiten werden mit dem mitgelieferten PDF.js-Viewer lokal gerendert; ein nativer PDF-Player ist nicht nötig. Abweichende Buchausgaben können andere Dateiseiten haben.
 
@@ -95,10 +95,10 @@ Konkrete Instagram-Reels, YouTube-Videos, ARD-Sendungen, Verlagsinterviews, Podc
 
 ## Gestaltung und Original-Reels
 
-Die Startseite rückt Clara Lösel als Lyrikerin, Poetry Artist und literarische Content Creatorin ins Zentrum: offizielles Porträtmotiv, eine feste Galerie mit drei Original-Reels, eine Einordnung ihres Arbeitens zwischen Buch, Bühne und Feed und direkte Einstiege zum eigenen Schreiben. Die visuelle Gestaltung verwendet Violett, Flieder und Apricot statt der früheren grünen Werkstattoptik.
+Die Startseite rückt Clara Lösel als Lyrikerin, Poetry Artist und literarische Content Creatorin ins Zentrum: offizielles Porträtmotiv, eine feste Galerie mit acht Original-Reels und Themenfiltern, eine Einordnung ihres Arbeitens zwischen Buch, Bühne und Feed und direkte Einstiege zum eigenen Schreiben. Die visuelle Gestaltung verwendet Violett, Flieder und Apricot statt der früheren grünen Werkstattoptik.
 
 Porträtmotiv: https://claraloesel.de/wp-content/uploads/2026/07/keyvisual-claral-loesel-2.jpg (offizielle Website). Das Bild und die fremden Medien sind nicht von der MIT-Code-Lizenz umfasst. Der lokale Viewer verwendet PDF.js 6.5.438 aus dem offiziellen npm-Paket `pdfjs-dist`; Lizenz und mitgelieferte Hinweise unter `dist/vendor/pdfjs/`. Keine Buchdatei ist Bestandteil des Repositorys.
 
-Unter jedem der drei fest eingebetteten Original-Reels steht eine eigene kurze Schreibidee. **Dazu schreiben** öffnet die Schreibwerkstatt mit dieser Idee und dem Quellenlink. Vorhandene Entwürfe bleiben erhalten. Die Impulse erscheinen sowohl auf der Startseite als auch in der Inspirationsbibliothek.
+Unter jedem der acht fest eingebetteten Original-Reels steht eine eigene kurze Schreibidee. **Dazu schreiben** öffnet die Schreibwerkstatt mit dieser Idee und dem Quellenlink. Vorhandene Entwürfe bleiben erhalten. Die Impulse erscheinen sowohl auf der Startseite als auch in der Inspirationsbibliothek.
 
 Die eigenen Oberflächentexte, Schreibaufträge, Beispielgrammatiken und Begleitdokumente verwenden Schweizer Rechtschreibung mit ss. Zitate und Originaltexte von Clara Lösel bleiben unverändert. Bereits eingegebene eigene Texte werden nicht automatisch umgeschrieben.

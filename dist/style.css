@@ -10,3 +10,4 @@ body{background:#15121d;background-image:radial-gradient(ellipse at 10% 35%,#6c3
 @media(max-width:700px){nav{scrollbar-width:none}nav::-webkit-scrollbar{display:none}}
 
 .reel-writing{border-top:1px solid var(--line);margin:16px 0 20px;padding-top:18px}.reel-writing h4{margin:0 0 10px;font-size:16px;color:var(--text)}.reel-writing p{font-size:15px;color:var(--muted);line-height:1.7}.reel-writing .primary{font-size:15px;padding:11px 20px}
+.reel-filters{margin:20px 0 8px}.reel-tile{display:flex;flex-direction:column}.reel-tile .original-reel{flex-shrink:0}.reel-tile .reel-writing{margin-top:auto}.reel-tile .content-note{min-height:0}.reel-tile h3{min-height:62px}.reel-tile>.small{min-height:44px}@media(max-width:700px){.reel-tile h3{min-height:0}}

@@ -52,8 +52,21 @@ Die Links wurden auf Quellenebene verifiziert. Es wurde nicht jeder Film und Pod
 
 ## Darstellung, Original-Reels und lokaler Viewer
 
-Die drei verifizierten Instagram-Beiträge sind zusätzlich als feste, lazy geladene Original-Embeds auf der Startseite und in der Inspirationsbibliothek eingebaut. Sie werden nicht auf GitHub kopiert. Beim Annähern an den sichtbaren Bereich werden ihre Inhalte vom Instagram-Anbieter geladen; diese Verbindung ist in der Seite beschrieben.
+Die acht verifizierten Instagram-Beiträge sind zusätzlich als feste, lazy geladene Original-Embeds auf der Startseite und in der Inspirationsbibliothek eingebaut. Sie werden nicht auf GitHub kopiert. Beim Annähern an den sichtbaren Bereich werden ihre Inhalte vom Instagram-Anbieter geladen; diese Verbindung ist in der Seite beschrieben.
 
 Das Porträtmotiv auf der Startseite ist das von claraloesel.de verwendete Motiv: https://claraloesel.de/wp-content/uploads/2026/07/keyvisual-claral-loesel-2.jpg. Es wird als lokales Asset mit Quellenhinweis eingebunden, ohne eine eigene Fotografie oder eine freie Lizenz zu behaupten. Urheberschaftsrechte verbleiben bei den jeweiligen Rechteinhabern.
 
 PDF.js 6.5.438 wurde aus dem offiziellen npm-Paket `pdfjs-dist` übernommen. Bibliotheksdateien, Worker, Standardfonts, WASM-Dateien und zugehörige Lizenzen liegen unter `dist/vendor/pdfjs/`; der Viewer lädt keine Bibliothek von einem CDN. Die PDF-Datei selbst wird ausschliesslich vom Nutzer lokal ausgewählt. Seitenanzeige, Blättern und textuelle Seitenansicht wurden mit der bereitgestellten Datei im Browser getestet.
+
+
+## Weitere Original-Reels: Liebe, Hoffnung und Selbstwert
+
+Am 27.11.2026 anhand der Beiträge und ihrer Begleittexte auf dem offiziellen Profil geprüft. Die Titel in der Galerie beschreiben das Thema und sind keine behaupteten Gedichttitel. Die Schreibideen stammen von dieser Lernseite.
+
+- [Verliebt sein und sich selbst treu bleiben](https://www.instagram.com/claraloesel/reel/DepJatpumXF/): Lösel ordnet den Text Liebe und Liebeskummer zu. Ein Farbbild führt zur Schreibidee über Nähe und die eigene Persönlichkeit.
+- [Freundschaft im Alltag](https://www.instagram.com/claraloesel/reel/DaUTcv1NQOr/): platonische Liebe und gemeinsamer Alltag; Schreibidee über Nähe ohne Dialog.
+- [Sich Frieden vorstellen](https://www.instagram.com/claraloesel/reel/DUKcqZ4CBMp/): Lösel nennt einen Satz von Carl Sandburg als Ausgangspunkt ihres eigenen Textes. Diese Zuschreibung bleibt auf der Seite sichtbar. Schreibidee: Veränderungen nach dem Ende eines Konflikts zeigen.
+- [Für andere da sein, sich selbst nicht vergessen](https://www.instagram.com/claraloesel/reel/Ddx3xGsNbxB/): Fürsorge und Selbstaufopferung; Schreibidee aus der Perspektive einer Taschenlampe.
+- [Der eigenen Selbstkritik widersprechen](https://www.instagram.com/claraloesel/reel/De7MToNOy6d/): negative Gedanken über den eigenen Körper unterbrechen; die Schreibidee verwendet eine erfundene Figur.
+
+Themenhinweise stehen vor den beiden Beiträgen zu Krieg beziehungsweise Körperbildern und Essstörungen. Alle acht Reels sind nach Liebe, Hoffnung, Selbstwert und Gesellschaft filterbar. Jeder Werkstattbutton übernimmt die eigene Schreibidee und den Original-Link; vorhandene Entwürfe bleiben erhalten. Die bereits eingebundenen Originaltexte aus dem Buch bleiben unverändert.
