@@ -1,12 +1,12 @@
 {
   "name": "zwischen-den-zeilen",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "private": true,
   "type": "module",
   "description": "Interaktives Lyriklabor zu Clara Lösel mit Rhythmus- und Schreibwerkstatt",
   "scripts": {
     "start": "python3 -m http.server 4173 --directory dist",
     "test": "node --test tests/*.test.js",
-    "check": "node --check dist/app.js && node --check dist/core.js && node --check dist/grammar.js && node --check dist/examples.js && node --check dist/library.js && node --check dist/inspiration.js && node --check dist/pdf-viewer.js"
+    "check": "node --check dist/app.js && node --check dist/core.js && node --check dist/grammar.js && node --check dist/wordfields.js && node --check dist/examples.js && node --check dist/library.js && node --check dist/inspiration.js && node --check dist/pdf-viewer.js"
   }
 }

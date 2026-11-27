@@ -108,3 +108,6 @@ Die acht Reel-Schreibideen sind jeweils einer Beispielgrammatik zugeordnet. **Mi
 
 
 Jedes der acht Reels hat eine eigene Beispielgrammatik mit thematisch abgestimmten Wortfeldern und Regeln. Farben und Begegnungen, gemeinsamer Alltag, Zeichen der Hoffnung, Selbstfürsorge, innere Stimmen und Erwartungen können direkt kombiniert und verändert werden. Diese Übungsverse sind eigens verfasst und keine Originaltexte von Clara Lösel.
+
+
+Unter **Deine Wörter und Bilder** lassen sich einzelne Wörter und ganze Wendungen ohne Regelsyntax hinzufügen, ändern und entfernen. Jeder Eintrag hat ein eigenes Textfeld; Zeilenumbrüche und Anführungszeichen sind möglich. Mindestens ein Eintrag bleibt je Wortfeld erhalten. Die aufklappbare Textansicht wird automatisch mitgeführt und aktualisiert ihrerseits die Eingabefelder. Zusammengesetzte oder noch unfertige Regeln bleiben erhalten und werden in der Textansicht bearbeitet. Änderungen werden lokal gespeichert und beim nächsten Erzeugen verwendet; bestehende Verse, eigene Grammatiken und deren Export verwenden dieselben Wortfelder.
