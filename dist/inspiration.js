@@ -40,3 +40,9 @@ export const POETOLOGY = [
 export function filterResources(items,{query='',type='Alle',theme='Alle',favoritesOnly=false,favorites=[]}={}){
  const q=query.trim().toLocaleLowerCase('de');return items.filter(item=>(type==='Alle'||item.type===type)&&(theme==='Alle'||(item.themes||[item.theme]).includes(theme))&&(!favoritesOnly||favorites.includes(item.id))&&(!q||[item.title,item.form,item.note,item.task,item.text,item.reading,...(item.themes||[item.theme])].filter(Boolean).join(' ').toLocaleLowerCase('de').includes(q)));
 }
+
+export const REEL_WRITING_PROMPTS = [
+ {id:'C2UM_qzNwGl',title:'Worte & Haltung',description:'Wie ein Text öffentlich Position bezieht.',prompt:'Wähle einen alltäglichen Widerspruch, der dich ärgert. Erzähle ihn in sechs Versen. Lass eine Handlung zeigen, was du kritisierst, und verzichte auf einen erklärenden Schlusssatz.'},
+ {id:'DPSxE6-CFmU',title:'Schönheit & Selbstwert',description:'Themenhinweis: Schönheitsdruck und Essstörungen.',prompt:'Nimm einen Gegenstand, der für dich mit Erwartungen verbunden ist. Lass ihn in vier Versen sprechen. Was würde er sagen, wenn er ehrlich wäre?'},
+ {id:'DS6xxyiCP7v',title:'Mehr als ein perfekter Feed',description:'Claras persönlicher Jahresrückblick 2025.',prompt:'Wähle eine kleine Veränderung – selbst erlebt oder erfunden. Zeige sie in fünf Versen an einer konkreten Szene. Lass die Lesenden selbst erkennen, was sich verändert hat.'}
+];

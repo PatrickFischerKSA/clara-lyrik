@@ -98,3 +98,5 @@ Konkrete Instagram-Reels, YouTube-Videos, ARD-Sendungen, Verlagsinterviews, Podc
 Die Startseite rückt Clara Lösel als Lyrikerin, Poetry Artist und literarische Content Creatorin ins Zentrum: offizielles Porträtmotiv, eine feste Galerie mit drei Original-Reels, eine Einordnung ihres Arbeitens zwischen Buch, Bühne und Feed und direkte Einstiege zum eigenen Schreiben. Die visuelle Gestaltung verwendet Violett, Flieder und Apricot statt der früheren grünen Werkstattoptik.
 
 Porträtmotiv: https://claraloesel.de/wp-content/uploads/2026/07/keyvisual-claral-loesel-2.jpg (offizielle Website). Das Bild und die fremden Medien sind nicht von der MIT-Code-Lizenz umfasst. Der lokale Viewer verwendet PDF.js 6.5.438 aus dem offiziellen npm-Paket `pdfjs-dist`; Lizenz und mitgelieferte Hinweise unter `dist/vendor/pdfjs/`. Keine Buchdatei ist Bestandteil des Repositorys.
+
+Unter jedem der drei fest eingebetteten Original-Reels steht eine eigene kurze Schreibidee. **Dazu schreiben** öffnet die Schreibwerkstatt mit dieser Idee und dem Quellenlink. Vorhandene Entwürfe bleiben erhalten. Die Impulse erscheinen sowohl auf der Startseite als auch in der Inspirationsbibliothek.
