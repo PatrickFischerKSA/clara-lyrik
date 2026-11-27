@@ -102,3 +102,6 @@ Porträtmotiv: https://claraloesel.de/wp-content/uploads/2026/07/keyvisual-clara
 Unter jedem der acht fest eingebetteten Original-Reels steht eine eigene kurze Schreibidee. **Dazu schreiben** öffnet die Schreibwerkstatt mit dieser Idee und dem Quellenlink. Vorhandene Entwürfe bleiben erhalten. Die Impulse erscheinen sowohl auf der Startseite als auch in der Inspirationsbibliothek.
 
 Die eigenen Oberflächentexte, Schreibaufträge, Beispielgrammatiken und Begleitdokumente verwenden Schweizer Rechtschreibung mit ss. Zitate und Originaltexte von Clara Lösel bleiben unverändert. Bereits eingegebene eigene Texte werden nicht automatisch umgeschrieben.
+
+
+Die acht Reel-Schreibideen sind jeweils einer Beispielgrammatik zugeordnet. **Mit Bauplan weiterdichten** öffnet den D-Gram-Regel-Editor mit vorausgewähltem Beispiel, Original-Link und einem eigenen Auftrag zum Anpassen der Regeln und Wortfelder. Der vorhandene Editorinhalt bleibt erhalten, bis das Beispiel ausdrücklich geladen wird; danach kann er wiederhergestellt werden. **Dazu schreiben** bleibt als freier Einstieg verfügbar.
