@@ -20,8 +20,8 @@ Für genau 90 Minuten nur zwei Grundmetren plus ein Grenzphänomen wählen; Digi
 
 1. Ein Alltagsding mit einem inneren Vorgang verbinden; konkrete Details sammeln.
 2. Rohtext mit eigenem Bild, direkter Anrede, optionaler Anapher und Wendung schreiben.
-3. Das lokale Regelgerüst variieren. Mindestens zwei Varianten auf ihre Wirkung prüfen.
-4. Für die Erweiterung den exportierten Regelsatz in D-Gram öffnen: Rules und Vocabulary getrennt kopieren, Update Grammar, dann Digital Poet. Reihenfolge und Schluss von Hand gestalten.
+3. Im eingebauten D-Gram-Regel-Editor eigene Regeln und Wortfelder variieren. Mindestens zwei Varianten auf ihre Wirkung prüfen.
+4. Für die Erweiterung eine neue Kategorie und einen eigenen Startbaustein definieren, „Regeln prüfen“ und „Verse erzeugen“ wählen. In der Ableitung untersuchen, welche Regeln gewählt wurden. Mit dem Beispiel „Bild und Wendung“ mehrzeilige Gedichte erproben. Der Export in das Original-D-Gram bleibt optional; für die Kernaufgabe ist kein Seitenwechsel nötig.
 5. Mit der Textlupe Wiederholungen und Suchwortkontexte untersuchen. Kurze Originalstelle und eigene Fassung können in A/B verglichen werden. Zahlen als Hinweise, nicht als Qualitätsmessung verwenden.
 6. Mindestens zwei bewusste Änderungen dokumentieren; Text laut lesen; Veröffentlichung/Vortrag freiwillig.
 
