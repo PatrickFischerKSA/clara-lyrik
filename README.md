@@ -1,6 +1,6 @@
 # Zwischen den Zeilen
 
-Eine atmosphärische, interaktive Lyrikeinheit zu Clara Lösel für Sekundarstufe II (ab 16 Jahren), 90–105 Minuten. Deutschsprachig, ohne Abhängigkeiten oder Backend. Auf GitHub Pages auch unter einem Repository-Unterpfad lauffähig.
+Eine atmosphärische, interaktive Lyrikeinheit zu Clara Lösel für Sekundarstufe II (ab 16 Jahren), 90–105 Minuten. Deutschsprachig, ohne Installationsschritt oder Backend. Auf GitHub Pages auch unter einem Repository-Unterpfad lauffähig.
 
 ## Starten
 
@@ -29,7 +29,7 @@ Alternativ `dist/` auf jedem statischen Webhost bereitstellen. Die `.openai/host
 
 ## Lernstand und Datenschutz
 
-Alle Eingaben liegen ausschließlich in `localStorage` des Browsers. Keine Konten, Tracker, externen Fonts, eingebetteten Plattform-Player oder API-Schlüssel. Links öffnen externe Angebote erst bei Klick. Einträge können auf einem geteilten Gerät sichtbar bleiben. JSON-Sicherung und Wiederherstellung, Textjournal-Export und vollständiges lokales Löschen sind eingebaut. Privater Modus oder gelöschte Websitedaten können Fortschritt verlieren. Sicherungen enthalten eigene Texte: vertraulich behandeln.
+Alle Eingaben liegen ausschließlich in `localStorage` des Browsers. Keine Konten, eigenen Tracker, externen Fonts oder API-Schlüssel. Die fest hinterlegten Instagram-Reels laden ihre Originalplayer beim Annähern an den sichtbaren Bereich; dabei entsteht eine Verbindung zu Instagram. Weitere Medienplayer werden erst nach bewusstem Laden aufgerufen. Einträge können auf einem geteilten Gerät sichtbar bleiben. JSON-Sicherung und Wiederherstellung, Textjournal-Export und vollständiges lokales Löschen sind eingebaut. Privater Modus oder gelöschte Websitedaten können Fortschritt verlieren. Sicherungen enthalten eigene Texte: vertraulich behandeln.
 
 ## Prüfen
 
@@ -46,7 +46,7 @@ Kerntests überprüfen die metrischen Muster, Textanalyse, Generator und Sicheru
 
 ## Rechte
 
-Der selbst erstellte Programmcode steht unter MIT (LICENSE). Clara Lösels Gedichttext ist davon ausdrücklich ausgenommen; Rechte bei der Autorin/Rechteinhabern. Der kurze Textauszug dient der konkreten Analyse und trägt einen Quellennachweis. Das vollständige bereitgestellte Buch-PDF wird weder gebündelt noch hochgeladen. Für umfangreichere Texte und Medien müssen gesonderte Nutzungsrechte geklärt werden. DILAITS und Metrum sind verlinkte Inspirationsquellen; ihr Code und ihre Medien wurden nicht übernommen. Es handelt sich um eine unabhängige Unterrichtseinheit.
+Der selbst erstellte Programmcode steht unter MIT (LICENSE). Clara Lösels Gedichttexte und das offizielle Porträtmotiv sind davon ausdrücklich ausgenommen; Rechte bei der Autorin/Rechteinhabern. Der kurze Textauszug dient der konkreten Analyse und trägt einen Quellennachweis. Das vollständige bereitgestellte Buch-PDF wird weder gebündelt noch hochgeladen. Für umfangreichere Texte und Medien müssen gesonderte Nutzungsrechte geklärt werden. DILAITS und Metrum sind verlinkte Inspirationsquellen; ihr Code und ihre Medien wurden nicht übernommen. Es handelt sich um eine unabhängige Unterrichtseinheit.
 
 ## Regel-Editor direkt in der Werkstatt
 
@@ -82,3 +82,19 @@ Im Regel-Editor unter **Meine Grammatikbibliothek** einen Namen eingeben und **U
 - **Grammatikdatei importieren** prüft Format, Version und Felder und ergänzt den Eintrag, ohne den Editor zu verändern. Gleiche Namen erhalten `(Import 2)`, `(Import 3)` usw. Danach den importierten Eintrag laden.
 
 Die Dateien enthalten ausschließlich Textdaten und werden nicht ausgeführt oder auf einen Server hochgeladen. Der bisherige reine Textexport ist unter **Regeln als Text herunterladen** weiterhin verfügbar; importierbar sind die neuen Grammatik-JSON-Dateien. Es gelten maximal 30 Bibliothekseinträge, 30.000 Zeichen pro Regel-/Wortfeldpaar und 180.000 Zeichen für die Bibliothek. Namen sind bis zu 80 Zeichen lang. Browserdaten-Löschen oder „Fortschritt löschen“ entfernt auch die lokale Bibliothek; wichtige Einträge vorher exportieren.
+
+## Inspirationsbibliothek
+
+Unter `#inspiration` ergänzt eine frei zugängliche Materialbibliothek die fünf Lernstationen, ohne den Fortschritt oder die ursprüngliche Zeitplanung zu verändern. Sie umfasst zwölf Gedichtkarten aus dem bereitgestellten Buch, sechzehn konkrete Medien-/Quellenkarten und fünf poetologische Themenwege. Suche, Themen-/Medienfilter, lokale Merkliste und quellenspezifische Notizen unterstützen selbstständiges Arbeiten. Schreibimpulse können in die Werkstatt übernommen werden; passende Beispielgrammatiken werden dort vorausgewählt, ohne eigene Regeln zu überschreiben.
+
+Die Textkarten unterscheiden kurze Volltexte, Haupttext ohne PS und Auszüge. Jede hat eine PDF-Dateiseite, eine ausdrücklich als möglich gekennzeichnete Deutung und einen Arbeitsauftrag. Für das vollständige Buch können Lernende ihre eigene Datei lokal öffnen: Sie wird über eine temporäre Blob-URL im PDF-Viewer dieses Tabs angezeigt, nicht hochgeladen und nicht im Lernjournal gespeichert. Die Seiten werden mit dem mitgelieferten PDF.js-Viewer lokal gerendert; ein nativer PDF-Player ist nicht nötig. Abweichende Buchausgaben können andere Dateiseiten haben.
+
+Konkrete Instagram-Reels, YouTube-Videos, ARD-Sendungen, Verlagsinterviews, Podcasts und Porträts sind mit Herkunft und Prüfstand erfasst. YouTube-/Instagram-Player und ein verlinkter Deutschlandfunk-Audioplayer werden erst nach Klick geladen; dabei findet ein Kontakt zum jeweiligen Anbieter statt. Die prominent eingebauten Original-Reels auf Startseite und Inspirationsseite laden dagegen bereits beim Annähern an den sichtbaren Bereich. Einbettungen, Anmeldung und zeitlich begrenzte Mediatheksangebote liegen außerhalb der Kontrolle dieses Projekts. Die Originalquelle bleibt als Alternative erreichbar. Externe Medien und das vollständige Buch werden nicht im Repository gespeichert.
+
+`dist/inspiration.js` enthält die redaktionell ausgewählten Materialien, Querverweise und die Filterfunktion. Details zur Recherche und Ausgabe stehen in `docs/inspiration-quellen.md`.
+
+## Gestaltung und Original-Reels
+
+Die Startseite rückt Clara Lösel als Lyrikerin, Poetry Artist und literarische Content Creatorin ins Zentrum: offizielles Porträtmotiv, eine feste Galerie mit drei Original-Reels, eine Einordnung ihres Arbeitens zwischen Buch, Bühne und Feed und direkte Einstiege zum eigenen Schreiben. Die visuelle Gestaltung verwendet Violett, Flieder und Apricot statt der früheren grünen Werkstattoptik.
+
+Porträtmotiv: https://claraloesel.de/wp-content/uploads/2026/07/keyvisual-claral-loesel-2.jpg (offizielle Website). Das Bild und die fremden Medien sind nicht von der MIT-Code-Lizenz umfasst. Der lokale Viewer verwendet PDF.js 6.5.438 aus dem offiziellen npm-Paket `pdfjs-dist`; Lizenz und mitgelieferte Hinweise unter `dist/vendor/pdfjs/`. Keine Buchdatei ist Bestandteil des Repositorys.

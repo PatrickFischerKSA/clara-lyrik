@@ -1,0 +1,8 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {POEMS,MEDIA,POETOLOGY,filterResources} from '../dist/inspiration.js';
+import {GRAMMAR_EXAMPLES} from '../dist/examples.js';
+const items=[...POEMS.map(p=>({...p,type:'Gedichte'})),...MEDIA];
+test('all resource identifiers, crossreferences and workshop links resolve',()=>{assert.equal(new Set(items.map(x=>x.id)).size,items.length);for(const p of POEMS){assert.ok(p.page>0&&p.page<=193);assert.ok(p.text&&p.extent&&p.reading&&p.task);assert.ok(GRAMMAR_EXAMPLES.some(e=>e.id===p.example));for(const id of p.related)assert.ok(MEDIA.some(x=>x.id===id));}for(const concept of POETOLOGY)for(const id of [...concept.sourceIds,...concept.poemIds])assert.ok(items.some(x=>x.id===id));});
+test('media links use HTTPS and player IDs are strictly bounded',()=>{for(const m of MEDIA){assert.equal(new URL(m.url).protocol,'https:');assert.ok(m.publisher&&m.note&&m.task);if(m.youtube)assert.match(m.youtube,/^[A-Za-z0-9_-]{11}$/);if(m.instagram)assert.match(m.instagram,/^[A-Za-z0-9_-]+$/);if(m.audio)assert.equal(new URL(m.audio).hostname,'download.deutschlandfunk.de');}});
+test('search combines type, topic and favorites without mutating resources',()=>{const poems=filterResources(items,{type:'Gedichte',theme:'Nähe'});assert.ok(poems.length>=2);assert.ok(poems.every(x=>x.type==='Gedichte'&&x.theme==='Nähe'));assert.deepEqual(filterResources(items,{query:'ÖPNV',favoritesOnly:true,favorites:['oepnv']}).map(x=>x.id),['oepnv']);assert.equal(filterResources(items,{query:'zzzznonexistent'}).length,0);assert.equal(filterResources(items,{favoritesOnly:true}).length,0);assert.equal(items.length,28);});

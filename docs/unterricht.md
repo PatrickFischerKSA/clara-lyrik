@@ -43,3 +43,11 @@ Rechtmäßig zugängliches Buch/PDF für „lange version.“. Kopfhörer für o
 ## Baupläne sammeln und austauschen
 
 Lernende speichern eigene Fassungen unter unterscheidbaren Namen, etwa „Fensterbilder – erste Fassung“ und „Fensterbilder – nach Feedback“. In der Grammatikbibliothek können sie die Fassungen später auswählen und laden. Eine Grammatikdatei exportiert einen einzelnen gespeicherten Stand und kann auf einem anderen Gerät oder von einer Partnerperson importiert werden. Importierte Einträge überschreiben weder vorhandene Namen noch den aktuellen Editor. Auftrag: Tauscht einen Bauplan als Datei aus, verändert nur ein Wortfeld und beschreibt, wie sich die Wirkung verändert. Die Entwürfe bleiben bewusst als solche speicherbar; die Regelprüfung ist ein getrennter Arbeitsschritt.
+
+## Inspirationsbibliothek als Erweiterung
+
+Die fünf Stationen bleiben der Kern der Einheit. Die zusätzliche Navigation **Inspiration** eignet sich für freie Auswahl, Gruppenpuzzle oder eine weitere Lektion: Gruppen wählen einen Text, ein Medium und eine poetologische Frage, dokumentieren Befunde und entwickeln einen eigenen Schreibversuch. Fünf Themenwege verbinden Quelle und Gegenprobe: Entstehung, Publikum, Alltagssprache, Privatheit, Vortrag. Deutungen dieser Einheit von Selbstbeschreibungen der Autorin und journalistischer Rahmung unterscheiden.
+
+Die zwölf Textkarten und sechzehn Medienquellen lassen sich nach Thema und Typ filtern und lokal merken. Jede Quelle hat ein eigenes Notizfeld. „Mit diesem Impuls schreiben“ legt einen neuen Inspirationsvermerk an, überschreibt aber keinen Entwurf. „Passenden Bauplan … auswählen“ wählt nur ein Beispiel vor; die eigenen Regeln werden erst nach dem ausdrücklichen Laden verändert.
+
+Bei Texten zu psychischer Belastung, Körperbildern oder Rechtsextremismus ist der Themenhinweis bereits vor dem Öffnen sichtbar. Persönliche Erfahrungen oder Offenlegung werden nicht verlangt. Alternativen wie „öpnv.“ oder „wenn du wüsstest.“ stehen bereit. Die lokalen PDF-Seiten beziehen sich auf die bereitgestellte Ausgabe; andere Ausgaben können abweichen. Medien nur auszugsweise bearbeiten, Zeitstellen von den Lernenden dokumentieren lassen und bei nicht zugänglichen Playern die Originalquelle oder eine andere Karte wählen.
