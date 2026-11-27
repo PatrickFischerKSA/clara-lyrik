@@ -1,4 +1,4 @@
-import {POEMS,MEDIA,POETOLOGY,filterResources,REEL_WRITING_PROMPTS} from './inspiration.js';
+import {POEMS,MEDIA,POETOLOGY,filterResources,REEL_WRITING_PROMPTS} from './inspiration.js?v=1.5.1';
 import {namedGrammar,decodeLibrary,putGrammar,importGrammar,exportGrammar,unusedImportName} from './library.js';
 import {GRAMMAR_EXAMPLES} from './examples.js';
 import {compileGrammar,generateFromGrammar,DEFAULT_RULES,DEFAULT_WORDS} from './grammar.js';
