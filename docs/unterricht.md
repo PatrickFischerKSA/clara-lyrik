@@ -60,3 +60,6 @@ Jedes der acht Reels hat eine eigene Beispielgrammatik mit thematisch abgestimmt
 
 
 Unter **Deine Wörter und Bilder** lassen sich einzelne Wörter und ganze Wendungen ohne Regelsyntax hinzufügen, ändern und entfernen. Jeder Eintrag hat ein eigenes Textfeld; Zeilenumbrüche und Anführungszeichen sind möglich. Mindestens ein Eintrag bleibt je Wortfeld erhalten. Die aufklappbare Textansicht wird automatisch mitgeführt und aktualisiert ihrerseits die Eingabefelder. Zusammengesetzte oder noch unfertige Regeln bleiben erhalten und werden in der Textansicht bearbeitet. Änderungen werden lokal gespeichert und beim nächsten Erzeugen verwendet; bestehende Verse, eigene Grammatiken und deren Export verwenden dieselben Wortfelder.
+
+
+**Ein eigenes Wortfeld anlegen** ergänzt im Regel-Editor ein benanntes Feld: Namen eingeben, erste Wörter oder Wendungen zeilenweise sammeln und „Wortfeld anlegen“ wählen. Leerzeichen im Namen werden zu Unterstrichen. Bereits vorhandene Namen in Regeln und Wortfeldern sind geschützt. Optional macht „Das neue Wortfeld direkt zum Erzeugen verwenden“ das Feld zum Startsymbol; so lässt es sich sofort ohne Regelsyntax ausprobieren. Ohne diese Option bleibt das aktuelle Startsymbol erhalten. Neue Felder werden mit dem aktuellen Editor, der benannten Grammatik und deren Export gespeichert.

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readWordFields,updateWordField} from '../dist/wordfields.js';
+import {readWordFields,updateWordField,createWordField} from '../dist/wordfields.js';
 import {GRAMMAR_EXAMPLES} from '../dist/examples.js';
 import {compileGrammar,generateFromGrammar} from '../dist/grammar.js';
 
@@ -42,4 +42,25 @@ test('word-field editing rejects oversized input and invalid values without rewr
  assert.throws(()=>readWordFields('a'.repeat(30001)),/30.000/);
  assert.throws(()=>updateWordField(text,0,[{}]),/Eintrag/);
  assert.equal(text,'Bild -> "licht"');
+});
+
+
+test('new named fields preserve source and generate directly without rule syntax',()=>{
+ const rules='S -> Bild',words='# meine Notiz\nBild -> "licht"';
+ const created=createWordField(rules,words,'  Meine Farben  ',['tintenblau','ein "heller" Rand | # Licht']);
+ assert.equal(created.name,'Meine_Farben');
+ assert.ok(created.words.startsWith(words+'\n'));
+ assert.deepEqual(readWordFields(created.words).at(-1).values,['tintenblau','ein "heller" Rand | # Licht']);
+ assert.equal(generateFromGrammar(compileGrammar(rules,created.words,created.name),1,()=>0).text,'tintenblau');
+ assert.equal(createWordField('','','Nähe',['eine offene Tür']).words,'Nähe -> "eine offene Tür"');
+});
+test('new fields reject duplicate rule names, invalid labels, empty entries and oversize input',()=>{
+ for(const label of ['Bild','bild',' BILD '])assert.throws(()=>createWordField('Bild -> "vorhanden"','',label,['neu']),/schon/);
+ assert.throws(()=>createWordField('','Meine_Farben -> "blau"','Meine Farben',['rot']),/schon/);
+ assert.throws(()=>createWordField('Hoffnung ->','', 'Hoffnung',['morgen']),/schon/);
+ for(const label of ['', '1Feld','Natur!', 'a'.repeat(61)])assert.throws(()=>createWordField('','',label,['neu']),/Namen/);
+ for(const entries of [[],[''],['   '],[{}]])assert.throws(()=>createWordField('','','Natur',entries),/mindestens/);
+ assert.throws(()=>createWordField('a'.repeat(30000),'','Natur',['regen']),/30.000/);
+ const unfinished='Bild -> "offen';
+ assert.ok(createWordField('',unfinished,'Natur',['regen']).words.startsWith(unfinished+'\n'));
 });
