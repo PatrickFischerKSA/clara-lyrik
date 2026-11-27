@@ -114,3 +114,6 @@ Unter **Deine Wörter und Bilder** lassen sich einzelne Wörter und ganze Wendun
 
 
 **Ein eigenes Wortfeld anlegen** ergänzt im Regel-Editor ein benanntes Feld: Namen eingeben, erste Wörter oder Wendungen zeilenweise sammeln und „Wortfeld anlegen“ wählen. Leerzeichen im Namen werden zu Unterstrichen. Bereits vorhandene Namen in Regeln und Wortfeldern sind geschützt. Optional macht „Das neue Wortfeld direkt zum Erzeugen verwenden“ das Feld zum Startsymbol; so lässt es sich sofort ohne Regelsyntax ausprobieren. Ohne diese Option bleibt das aktuelle Startsymbol erhalten. Neue Felder werden mit dem aktuellen Editor, der benannten Grammatik und deren Export gespeichert.
+
+
+Jedes bearbeitbare Wortfeld bietet **Umbenennen** und **Wortfeld löschen**. Beim Umbenennen werden ganze Bausteinnamen in den Regeln und Wortfeldern sowie das Startsymbol angepasst; Text in Anführungszeichen und Kommentare bleiben unverändert. Bei verwendeten Feldern lässt sich zum Löschen ein anderes vorhandenes Wortfeld als Ersatz wählen, das alle Verweise übernimmt. Fehlt ein Ersatz, bleibt das Feld erhalten. Umbenennen und Löschen lassen sich über „Vorherigen Bauplan wiederherstellen“ zurücknehmen. Die benannte Bibliothek bleibt bis zum erneuten Speichern unverändert.

@@ -1,4 +1,4 @@
-import {readWordFields,updateWordField,createWordField} from './wordfields.js?v=1.7.1';
+import {readWordFields,updateWordField,createWordField,renameWordField,deleteWordField,wordFieldUsage} from './wordfields.js?v=1.7.2';
 import {POEMS,MEDIA,POETOLOGY,filterResources,REEL_WRITING_PROMPTS} from './inspiration.js?v=1.6.2';
 import {namedGrammar,decodeLibrary,putGrammar,importGrammar,exportGrammar,unusedImportName} from './library.js?v=1.5.2';
 import {GRAMMAR_EXAMPLES} from './examples.js?v=1.6.2';
@@ -139,7 +139,7 @@ function bindWordFieldEditor(persistEditor,status){
  const renderFields=()=>{
   try{
    const fields=readWordFields(source.value);
-   forms.innerHTML=fields.length?fields.map(field=>field.values?`<fieldset class="wordfield-group" data-wordfield="${field.index}"><legend>${esc(field.name)}</legend>${field.values.map((value,i)=>`<div class="wordfield-row"><label class="sr-only" for="word-${field.index}-${i}">${esc(field.name)} · Eintrag ${i+1}</label><textarea id="word-${field.index}-${i}" data-word-index="${i}" rows="2" placeholder="Dein Wort oder deine Wendung …">${esc(value)}</textarea><button data-word-remove="${i}" aria-label="Eintrag ${i+1} aus ${esc(field.name)} entfernen" ${field.values.length===1?'disabled':''}>Entfernen</button></div>`).join('')}<button data-word-add aria-label="Eintrag zu ${esc(field.name)} hinzufügen">Eintrag hinzufügen</button><p class="small">${field.values.length} ${field.values.length===1?'Eintrag':'Einträge'} · Mindestens ein Eintrag bleibt im Wortfeld.</p></fieldset>`:`<aside class="card"><h3>${esc(field.name)}</h3><p class="small">Dieses Feld enthält eine unvollständige oder zusammengesetzte Regel. Du kannst es unter „Wortfelder als Text bearbeiten“ ändern; der Text bleibt erhalten.</p><p class="small">${esc(field.error)}</p></aside>`).join(''):'<p class="small">Noch keine Wortfelder vorhanden. Lege oben dein erstes Wortfeld an oder lade ein Beispiel.</p>';
+   forms.innerHTML=fields.length?fields.map(field=>field.values?`<fieldset class="wordfield-group" data-wordfield="${field.index}"><legend>${esc(field.name)}</legend><div class="actions wordfield-manage"><button type="button" data-wordfield-rename aria-label="Wortfeld ${esc(field.name)} umbenennen">Umbenennen</button><button type="button" data-wordfield-delete aria-label="Wortfeld ${esc(field.name)} löschen">Wortfeld löschen</button></div>${field.values.map((value,i)=>`<div class="wordfield-row"><label class="sr-only" for="word-${field.index}-${i}">${esc(field.name)} · Eintrag ${i+1}</label><textarea id="word-${field.index}-${i}" data-word-index="${i}" rows="2" placeholder="Dein Wort oder deine Wendung …">${esc(value)}</textarea><button data-word-remove="${i}" aria-label="Eintrag ${i+1} aus ${esc(field.name)} entfernen" ${field.values.length===1?'disabled':''}>Entfernen</button></div>`).join('')}<button data-word-add aria-label="Eintrag zu ${esc(field.name)} hinzufügen">Eintrag hinzufügen</button><p class="small">${field.values.length} ${field.values.length===1?'Eintrag':'Einträge'} · Mindestens ein Eintrag bleibt im Wortfeld.</p></fieldset>`:`<aside class="card"><h3>${esc(field.name)}</h3><p class="small">Dieses Feld enthält eine unvollständige oder zusammengesetzte Regel. Du kannst es unter „Wortfelder als Text bearbeiten“ ändern; der Text bleibt erhalten.</p><p class="small">${esc(field.error)}</p></aside>`).join(''):'<p class="small">Noch keine Wortfelder vorhanden. Lege oben dein erstes Wortfeld an oder lade ein Beispiel.</p>';
    forms.querySelectorAll('[data-wordfield]').forEach(group=>{
     const line=Number(group.dataset.wordfield);
     const change=(edit,redraw=false,focusIndex=0)=>{
@@ -152,6 +152,37 @@ function bindWordFieldEditor(persistEditor,status){
     group.querySelectorAll('[data-word-index]').forEach(input=>input.oninput=()=>change(values=>{values[Number(input.dataset.wordIndex)]=input.value;}));
     group.querySelectorAll('[data-word-remove]').forEach(button=>button.onclick=()=>{const index=Number(button.dataset.wordRemove);change(values=>values.splice(index,1),true,Math.max(0,index-1));});
     group.querySelector('[data-word-add]').onclick=()=>{const field=readWordFields(source.value).find(field=>field.index===line);change(values=>values.push(''),true,field.values.length);};
+    const applyStructure=result=>{
+     persistEditor();for(const key of ['rules','words','start','count'])state.notes['grammar-previous-'+key]=state.notes['grammar-'+key];
+     $('#grammar-rules').value=result.rules;source.value=result.words;$('#grammar-start').value=result.start;
+     persistEditor();renderFields();$('#grammar-undo-example').disabled=false;$('#dialog').close();
+    };
+    group.querySelector('[data-wordfield-rename]').onclick=()=>{
+     const field=readWordFields(source.value).find(field=>field.index===line);
+     modal(`<h2>Wortfeld umbenennen</h2><p>Verweise in Regeln und Wortfeldern sowie das Startsymbol werden automatisch angepasst. Wörter, Wendungen und Kommentare bleiben unverändert.</p><form id="wordfield-rename-form"><label class="field" for="wordfield-rename-name">Neuer Name</label><input id="wordfield-rename-name" type="text" maxlength="60" value="${esc(field.name)}"><p class="small">Leerzeichen werden zu Unterstrichen. Ein bereits vergebener Name bleibt geschützt.</p><p id="wordfield-rename-feedback" role="status" aria-live="polite"></p><button type="submit" class="primary">Name speichern</button></form>`);
+     $('#wordfield-rename-name').focus();
+     $('#wordfield-rename-form').onsubmit=event=>{
+      event.preventDefault();
+      try{
+       const result=renameWordField($('#grammar-rules').value,source.value,$('#grammar-start').value,line,$('#wordfield-rename-name').value);
+       applyStructure(result);tell(`„${field.name}“ heisst jetzt „${result.name}“. Alle Verweise sind angepasst. Mit „Vorherigen Bauplan wiederherstellen“ kannst du die Änderung zurücknehmen.`);status('Wortfeld umbenannt und Verweise angepasst. Die letzte Ausgabe bleibt erhalten.');
+       $(`#word-${line}-0`)?.focus();
+      }catch(error){$('#wordfield-rename-feedback').textContent=error.message;}
+     };
+    };
+    group.querySelector('[data-wordfield-delete]').onclick=()=>{
+     const usage=wordFieldUsage($('#grammar-rules').value,source.value,$('#grammar-start').value,line);
+     const alternatives=readWordFields(source.value).filter(field=>field.values&&field.name!==usage.name);
+     modal(`<h2>Wortfeld „${esc(usage.name)}“ löschen?</h2><p>${usage.used?'Dieses Wortfeld wird noch verwendet. Wähle ein anderes Feld; die Verweise und gegebenenfalls das Startsymbol werden automatisch darauf umgestellt.':'Dieses Wortfeld wird in den aktuellen Regeln und im Startsymbol nicht verwendet. Seine Einträge werden aus dem Editor entfernt.'}</p>${usage.used?alternatives.length?`<label class="field" for="wordfield-delete-replacement">Verweise ersetzen durch</label><select id="wordfield-delete-replacement"><option value="">Anderes Wortfeld wählen …</option>${[...new Set(alternatives.map(field=>field.name))].map(name=>`<option value="${esc(name)}">${esc(name)}</option>`).join('')}</select>`:'<p>Lege zuerst ein anderes Wortfeld an, das die Verweise übernehmen kann.</p>':''}<p class="small">Über „Vorherigen Bauplan wiederherstellen“ kannst du die Löschung zurücknehmen. Gespeicherte Grammatiken in deiner Bibliothek behalten ihren bisherigen Stand.</p><p id="wordfield-delete-feedback" role="status" aria-live="polite"></p><div class="actions"><button id="wordfield-cancel-delete">Abbrechen</button><button class="primary" id="wordfield-confirm-delete" ${usage.used&&!alternatives.length?'disabled':''}>Wortfeld löschen</button></div>`);
+     $('#wordfield-cancel-delete').onclick=()=>$('#dialog').close();
+     $('#wordfield-confirm-delete').onclick=()=>{
+      try{
+       const replacement=$('#wordfield-delete-replacement')?.value||'';
+       const result=deleteWordField($('#grammar-rules').value,source.value,$('#grammar-start').value,line,replacement);
+       applyStructure(result);tell(`„${usage.name}“ gelöscht.${replacement?` Die Verweise verwenden jetzt „${replacement}“.`:''} Die Änderung kann über „Vorherigen Bauplan wiederherstellen“ zurückgenommen werden.`);status('Wortfeld gelöscht. Die letzte Versausgabe bleibt erhalten.');$('#wordfield-name').focus();
+      }catch(error){$('#wordfield-delete-feedback').textContent=error.message;}
+     };
+    };
    });
   }catch(error){forms.textContent=error.message;}
  };

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readWordFields,updateWordField,createWordField} from '../dist/wordfields.js';
+import {readWordFields,updateWordField,createWordField,renameWordField,deleteWordField,wordFieldUsage} from '../dist/wordfields.js';
 import {GRAMMAR_EXAMPLES} from '../dist/examples.js';
 import {compileGrammar,generateFromGrammar} from '../dist/grammar.js';
 
@@ -63,4 +63,48 @@ test('new fields reject duplicate rule names, invalid labels, empty entries and 
  assert.throws(()=>createWordField('a'.repeat(30000),'','Natur',['regen']),/30.000/);
  const unfinished='Bild -> "offen';
  assert.ok(createWordField('',unfinished,'Natur',['regen']).words.startsWith(unfinished+'\n'));
+});
+
+
+test('renaming every example updates references while preserving generated words',()=>{
+ for(const example of GRAMMAR_EXAMPLES){
+  const field=readWordFields(example.words)[0];
+  const next=renameWordField(example.rules,example.words,example.start,field.index,'Eigene Bilder');
+  const generate=(rules,words,start)=>generateFromGrammar(compileGrammar(rules,words,start),1,()=>0).text;
+  assert.equal(generate(next.rules,next.words,next.start),generate(example.rules,example.words,example.start),example.id);
+  assert.deepEqual(readWordFields(next.words)[0].values,field.values);
+ }
+});
+test('renaming changes exact symbols including compact arrows, word-field references and the start symbol',()=>{
+ const rules=String.raw`# Nähe stays in this comment
+S->Nähe | Naehe | "Nähe" | 'Nähe' | "ein \"Nähe\"" # Nähe
+Naehe -> "Nähe"`;
+ const words='Nähe -> "Nähe ist ein Wort" # Nähe\nAntwort->Nähe\nNoch -> "Nähe"';
+ const next=renameWordField(rules,words,' Nähe ',0,'Neue Nähe');
+ assert.equal(next.start,'Neue_Nähe');
+ assert.equal(next.rules,rules.replace('S->Nähe','S->Neue_Nähe'));
+ assert.equal(next.words,'Neue_Nähe -> "Nähe ist ein Wort" # Nähe\nAntwort->Neue_Nähe\nNoch -> "Nähe"');
+ assert.equal(wordFieldUsage(next.rules,next.words,next.start,0).referenceCount,2);
+ assert.throws(()=>renameWordField(rules,words,'S',0,'naehe'),/schon/);
+ assert.throws(()=>renameWordField(rules,words,'S',0,'Noch'),/schon/);
+ assert.throws(()=>renameWordField(rules,words,'S',0,'1 falsch'),/Namen/);
+});
+test('deleting unused fields preserves neighbouring text and blocks referenced fields without replacement',()=>{
+ const rules='S -> Bild',words='# behalten\nBild -> "licht"\nNatur -> "regen" # eigene Sammlung';
+ const unused=deleteWordField(rules,words,'S',2);
+ assert.equal(unused.words,'# behalten\nBild -> "licht"');
+ assert.equal(unused.rules,rules);assert.equal(unused.start,'S');
+ assert.equal(wordFieldUsage(rules,words,'S',2).used,false);
+ assert.throws(()=>deleteWordField(rules,words,'S',1),/noch verwendet/);
+ assert.throws(()=>deleteWordField('',words,' Natur ',2),/noch verwendet/);
+ assert.throws(()=>deleteWordField(rules,words,'S',1,'Bild'),/anderes/);
+ assert.throws(()=>deleteWordField(rules,words,'S',1,'Fehlt'),/anderes/);
+});
+test('deleting a used field redirects references and the start symbol to a selected replacement',()=>{
+ const rules='S->Bild "Bild" # Bild';
+ const words='Bild -> "licht"\nNatur -> "regen"\nAntwort -> Bild';
+ const next=deleteWordField(rules,words,'Bild',0,'Natur');
+ assert.deepEqual(next,{rules:'S->Natur "Bild" # Bild',words:'Natur -> "regen"\nAntwort -> Natur',start:'Natur'});
+ const grammar=compileGrammar(next.rules,next.words,next.start);
+ assert.equal(generateFromGrammar(grammar,1,()=>0).text,'regen');
 });
