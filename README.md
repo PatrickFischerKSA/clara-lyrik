@@ -50,7 +50,7 @@ Der selbst erstellte Programmcode steht unter MIT (LICENSE). Clara Lösels Gedic
 
 ## Regel-Editor direkt in der Werkstatt
 
-Unter **Selbst dichten → D-Gram-Regel-Editor** lassen sich Regeln und Wortfelder bearbeiten, prüfen und sofort ausprobieren. Startsymbol und Anzahl der Erzeugungen (1–24) sind frei wählbar. Regeln, Wortfelder und letzte Ausgabe werden im lokalen Journal mitgesichert. Sechs auswählbare Beispielgrammatiken führen mit kurzen Arbeitsaufträgen zu Anaphern, Metaphern und überraschenden Wendungen. Das Laden speichert den bisherigen Bauplan für eine Wiederherstellung zwischen; die Auswahl allein ändert keine Regeln.
+Unter **Selbst dichten → D-Gram-Regel-Editor** lassen sich Regeln und Wortfelder bearbeiten, prüfen und sofort ausprobieren. Startsymbol und Anzahl der Erzeugungen (1–24) sind frei wählbar. Regeln, Wortfelder und letzte Ausgabe werden im lokalen Journal mitgesichert. Vierzehn auswählbare Beispielgrammatiken führen mit kurzen Arbeitsaufträgen zu Anaphern, Metaphern und überraschenden Wendungen. Das Laden speichert den bisherigen Bauplan für eine Wiederherstellung zwischen; die Auswahl allein ändert keine Regeln.
 
 ```text
 S -> Anrede Ding "."
@@ -104,4 +104,7 @@ Unter jedem der acht fest eingebetteten Original-Reels steht eine eigene kurze S
 Die eigenen Oberflächentexte, Schreibaufträge, Beispielgrammatiken und Begleitdokumente verwenden Schweizer Rechtschreibung mit ss. Zitate und Originaltexte von Clara Lösel bleiben unverändert. Bereits eingegebene eigene Texte werden nicht automatisch umgeschrieben.
 
 
-Die acht Reel-Schreibideen sind jeweils einer Beispielgrammatik zugeordnet. **Mit Bauplan weiterdichten** öffnet den D-Gram-Regel-Editor mit vorausgewähltem Beispiel, Original-Link und einem eigenen Auftrag zum Anpassen der Regeln und Wortfelder. Der vorhandene Editorinhalt bleibt erhalten, bis das Beispiel ausdrücklich geladen wird; danach kann er wiederhergestellt werden. **Dazu schreiben** bleibt als freier Einstieg verfügbar.
+Die acht Reel-Schreibideen sind jeweils einer Beispielgrammatik zugeordnet. **Mit Wörtern spielen** öffnet den D-Gram-Regel-Editor mit vorausgewähltem Beispiel, Original-Link und einem eigenen Auftrag zum Anpassen der Regeln und Wortfelder. Der vorhandene Editorinhalt bleibt erhalten, bis das Beispiel ausdrücklich geladen wird; danach kann er wiederhergestellt werden. **Dazu schreiben** bleibt als freier Einstieg verfügbar.
+
+
+Jedes der acht Reels hat eine eigene Beispielgrammatik mit thematisch abgestimmten Wortfeldern und Regeln. Farben und Begegnungen, gemeinsamer Alltag, Zeichen der Hoffnung, Selbstfürsorge, innere Stimmen und Erwartungen können direkt kombiniert und verändert werden. Diese Übungsverse sind eigens verfasst und keine Originaltexte von Clara Lösel.
