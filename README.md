@@ -42,7 +42,7 @@ Kerntests überprüfen die metrischen Muster, Textanalyse, Generator und Sicheru
 
 ## Anpassen
 
-`dist/app.js`: Inhalte, Quellen und Werkstatt. `dist/core.js`: Übungen und reine Analysefunktionen. `dist/grammar.js`: Parser, Regelprüfung und begrenzte Texterzeugung. `dist/style.css`: Darstellung. `docs/unterricht.md`: Unterrichtsplanung; `docs/quellen.md`: Quellen und Unterschiede zu den Vorbildern.
+`dist/app.js`: Inhalte, Quellen und Werkstatt. `dist/core.js`: Übungen und reine Analysefunktionen. `dist/grammar.js`: Parser, Regelprüfung und begrenzte Texterzeugung. `dist/examples.js`: Beispielgrammatiken und Arbeitsaufträge. `dist/style.css`: Darstellung. `docs/unterricht.md`: Unterrichtsplanung; `docs/quellen.md`: Quellen und Unterschiede zu den Vorbildern.
 
 ## Rechte
 
@@ -50,7 +50,7 @@ Der selbst erstellte Programmcode steht unter MIT (LICENSE). Clara Lösels Gedic
 
 ## Regel-Editor direkt in der Werkstatt
 
-Unter **Selbst dichten → D-Gram-Regel-Editor** lassen sich Regeln und Wortfelder bearbeiten, prüfen und sofort ausprobieren. Startsymbol und Anzahl der Erzeugungen (1–24) sind frei wählbar. Regeln, Wortfelder und letzte Ausgabe werden im lokalen Journal mitgesichert. Das Beispiel „Bild und Wendung“ zeigt einen mehrzeiligen Gedichtbauplan.
+Unter **Selbst dichten → D-Gram-Regel-Editor** lassen sich Regeln und Wortfelder bearbeiten, prüfen und sofort ausprobieren. Startsymbol und Anzahl der Erzeugungen (1–24) sind frei wählbar. Regeln, Wortfelder und letzte Ausgabe werden im lokalen Journal mitgesichert. Sechs auswählbare Beispielgrammatiken führen mit kurzen Arbeitsaufträgen zu Anaphern, Metaphern und überraschenden Wendungen. Das Laden speichert den bisherigen Bauplan für eine Wiederherstellung zwischen; die Auswahl allein ändert keine Regeln.
 
 ```text
 S -> Anrede Ding "."
@@ -61,3 +61,13 @@ Ding -> "einen Anfang" | "ein offenes Fenster"
 Unterstützt werden benannte Bausteine, Alternativen, einfache/doppelte Anführungszeichen, Kommentare mit `#`, verschachtelte Regeln und `"\n"` für Zeilenumbrüche. Eine Ableitungsansicht erklärt die konkrete Auswahl. Fehlende Referenzen, Syntaxfehler, nicht endende Regeln und Größenlimits werden angezeigt; unbenutzte Regeln erzeugen Hinweise. Eingaben werden ausschließlich als Text interpretiert, nie als Programm ausgeführt.
 
 Die vereinfachte Engine unterstützt keine D-Gram-Merkmalsvereinbarung wie `[NUM=sg]`, Syntaxbaumgrafik oder vollständige Auflistung aller möglichen Sätze. Passende Kasus- und Verbformen werden selbst in die Wortfelder eingetragen. Der Originaldienst ist optional; der Regel-Editor funktioniert ohne ihn.
+
+### Sechs Wege zum eigenen Gedicht
+
+| Verfahren | Beispielgrammatiken | Schwerpunkt |
+|---|---|---|
+| Anaphern | „Ich sehe …“; „Du musst nicht …“ | Wiederholung, Entwicklung und Bruch |
+| Metaphern | „Ein Gefühl wird ein Gegenstand“; „Wenn Dinge handeln“ | Konkrete Bildfelder und Personifikation |
+| Überraschende Wendungen | „Gesucht – gefunden“; „Der große Moment wird klein“ | Perspektivwechsel und Erwartungsbruch |
+
+Beispiel auswählen → Arbeitsauftrag lesen → in den Editor laden → Wortfelder verändern → Verse erzeugen → bewusst überarbeiten. „Vorherigen Bauplan wiederherstellen“ nimmt den letzten Beispielwechsel zurück (eine Stufe). Auswahl, bearbeitete Regeln und Sicherung werden lokal gespeichert. Die Beispiele sind eigens verfasstes Unterrichtsmaterial, keine Texte von Clara Lösel.
