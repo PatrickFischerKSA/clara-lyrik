@@ -38,7 +38,7 @@ Alle Textstellen wurden anhand der bereitgestellten PDF-Datei gelesen. Das volls
 - https://lauraseiler.com/593-interview-clara-losel/ – Folge 593 „Wie Schreiben dich zu dir zurückbringt“, veröffentlicht 18.11.2026. Gespräch und Begleitseite liefern Schreibimpulse; die spirituelle Rahmung wird transparent als Formatperspektive markiert. Keine ungeprüften Zeitmarken übernommen.
 - https://hotelmatze.podigee.io/569-clara-losel – „Wie bleibt man hoffnungsvoll?“, veröffentlicht 11.10.2026, aufgezeichnet 08.09.2026, ca. 1 h 56 min. Angaben nach offiziellen Episodennotizen und Episodenmetadaten.
 - https://www.youtube.com/watch?v=ADs56M_vD0c – Unter Uns Gesagt: „Clara Lösel: Sind wir zu sehr auf uns selbst bezogen?“, 09.06.2025. Gespräch und Lesungen, als Videopodcast geführt.
-- https://www.deutschlandfunkkultur.de/influencerin-und-bestseller-autorin-das-phaenomen-clara-loesel-100.html – Lynn Hruschka, Lesart, 28.04.2026, 5:29 min. Außenperspektive auf Buch und Plattform. Der Player nutzt die auf dieser Seite ausdrücklich verlinkte Original-MP3; keine lokale Kopie.
+- https://www.deutschlandfunkkultur.de/influencerin-und-bestseller-autorin-das-phaenomen-clara-loesel-100.html – Lynn Hruschka, Lesart, 28.04.2026, 5:29 min. Aussenperspektive auf Buch und Plattform. Der Player nutzt die auf dieser Seite ausdrücklich verlinkte Original-MP3; keine lokale Kopie.
 - https://www.deutschlandfunkkultur.de/gen-z-dichterin-clara-loesel-mit-neuem-buch-ich-dachte-sowas-fuehl-nur-ich-100.html – Lesart-Interview, 12.10.2026, 13:12 min. Neues Buch und Alltagssprache.
 
 ## Porträts und Selbstbeschreibungen
@@ -56,4 +56,4 @@ Die drei verifizierten Instagram-Beiträge sind zusätzlich als feste, lazy gela
 
 Das Porträtmotiv auf der Startseite ist das von claraloesel.de verwendete Motiv: https://claraloesel.de/wp-content/uploads/2026/07/keyvisual-claral-loesel-2.jpg. Es wird als lokales Asset mit Quellenhinweis eingebunden, ohne eine eigene Fotografie oder eine freie Lizenz zu behaupten. Urheberschaftsrechte verbleiben bei den jeweiligen Rechteinhabern.
 
-PDF.js 6.5.438 wurde aus dem offiziellen npm-Paket `pdfjs-dist` übernommen. Bibliotheksdateien, Worker, Standardfonts, WASM-Dateien und zugehörige Lizenzen liegen unter `dist/vendor/pdfjs/`; der Viewer lädt keine Bibliothek von einem CDN. Die PDF-Datei selbst wird ausschließlich vom Nutzer lokal ausgewählt. Seitenanzeige, Blättern und textuelle Seitenansicht wurden mit der bereitgestellten Datei im Browser getestet.
+PDF.js 6.5.438 wurde aus dem offiziellen npm-Paket `pdfjs-dist` übernommen. Bibliotheksdateien, Worker, Standardfonts, WASM-Dateien und zugehörige Lizenzen liegen unter `dist/vendor/pdfjs/`; der Viewer lädt keine Bibliothek von einem CDN. Die PDF-Datei selbst wird ausschliesslich vom Nutzer lokal ausgewählt. Seitenanzeige, Blättern und textuelle Seitenansicht wurden mit der bereitgestellten Datei im Browser getestet.

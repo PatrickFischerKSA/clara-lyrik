@@ -18,7 +18,7 @@ function parseBody(body,source,line){
   if(body[i]==='"'||body[i]==="'"){
    const quote=body[i++];let value='',closed=false;
    while(i<body.length){let c=body[i++];if(c===quote){closed=true;break;}if(c==='\\'){if(i>=body.length)syntax('Unvollständige Escape-Sequenz.',source,line);const n=body[i++];if(!['n','t','\\','"',"'"].includes(n))syntax(`Unbekannte Escape-Sequenz \\${n}.`,source,line);c=n==='n'?'\n':n==='t'?'\t':n;}value+=c;}
-   if(!closed)syntax('Schließendes Anführungszeichen fehlt.',source,line);
+   if(!closed)syntax('Schliessendes Anführungszeichen fehlt.',source,line);
    alternatives.at(-1).push({literal:value});
    if(i<body.length&&!/[\s|#]/u.test(body[i]))syntax('Zwischen Bausteinen muss ein Leerzeichen stehen.',source,line);
   }else{

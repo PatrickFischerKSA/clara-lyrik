@@ -29,7 +29,7 @@ Alternativ `dist/` auf jedem statischen Webhost bereitstellen. Die `.openai/host
 
 ## Lernstand und Datenschutz
 
-Alle Eingaben liegen ausschließlich in `localStorage` des Browsers. Keine Konten, eigenen Tracker, externen Fonts oder API-Schlüssel. Die fest hinterlegten Instagram-Reels laden ihre Originalplayer beim Annähern an den sichtbaren Bereich; dabei entsteht eine Verbindung zu Instagram. Weitere Medienplayer werden erst nach bewusstem Laden aufgerufen. Einträge können auf einem geteilten Gerät sichtbar bleiben. JSON-Sicherung und Wiederherstellung, Textjournal-Export und vollständiges lokales Löschen sind eingebaut. Privater Modus oder gelöschte Websitedaten können Fortschritt verlieren. Sicherungen enthalten eigene Texte: vertraulich behandeln.
+Alle Eingaben liegen ausschliesslich in `localStorage` des Browsers. Keine Konten, eigenen Tracker, externen Fonts oder API-Schlüssel. Die fest hinterlegten Instagram-Reels laden ihre Originalplayer beim Annähern an den sichtbaren Bereich; dabei entsteht eine Verbindung zu Instagram. Weitere Medienplayer werden erst nach bewusstem Laden aufgerufen. Einträge können auf einem geteilten Gerät sichtbar bleiben. JSON-Sicherung und Wiederherstellung, Textjournal-Export und vollständiges lokales Löschen sind eingebaut. Privater Modus oder gelöschte Websitedaten können Fortschritt verlieren. Sicherungen enthalten eigene Texte: vertraulich behandeln.
 
 ## Prüfen
 
@@ -58,7 +58,7 @@ Anrede -> "du nennst es" | "ich nenne es"
 Ding -> "einen Anfang" | "ein offenes Fenster"
 ```
 
-Unterstützt werden benannte Bausteine, Alternativen, einfache/doppelte Anführungszeichen, Kommentare mit `#`, verschachtelte Regeln und `"\n"` für Zeilenumbrüche. Eine Ableitungsansicht erklärt die konkrete Auswahl. Fehlende Referenzen, Syntaxfehler, nicht endende Regeln und Größenlimits werden angezeigt; unbenutzte Regeln erzeugen Hinweise. Eingaben werden ausschließlich als Text interpretiert, nie als Programm ausgeführt.
+Unterstützt werden benannte Bausteine, Alternativen, einfache/doppelte Anführungszeichen, Kommentare mit `#`, verschachtelte Regeln und `"\n"` für Zeilenumbrüche. Eine Ableitungsansicht erklärt die konkrete Auswahl. Fehlende Referenzen, Syntaxfehler, nicht endende Regeln und Grössenlimits werden angezeigt; unbenutzte Regeln erzeugen Hinweise. Eingaben werden ausschliesslich als Text interpretiert, nie als Programm ausgeführt.
 
 Die vereinfachte Engine unterstützt keine D-Gram-Merkmalsvereinbarung wie `[NUM=sg]`, Syntaxbaumgrafik oder vollständige Auflistung aller möglichen Sätze. Passende Kasus- und Verbformen werden selbst in die Wortfelder eingetragen. Der Originaldienst ist optional; der Regel-Editor funktioniert ohne ihn.
 
@@ -68,7 +68,7 @@ Die vereinfachte Engine unterstützt keine D-Gram-Merkmalsvereinbarung wie `[NUM
 |---|---|---|
 | Anaphern | „Ich sehe …“; „Du musst nicht …“ | Wiederholung, Entwicklung und Bruch |
 | Metaphern | „Ein Gefühl wird ein Gegenstand“; „Wenn Dinge handeln“ | Konkrete Bildfelder und Personifikation |
-| Überraschende Wendungen | „Gesucht – gefunden“; „Der große Moment wird klein“ | Perspektivwechsel und Erwartungsbruch |
+| Überraschende Wendungen | „Gesucht – gefunden“; „Der grosse Moment wird klein“ | Perspektivwechsel und Erwartungsbruch |
 
 Beispiel auswählen → Arbeitsauftrag lesen → in den Editor laden → Wortfelder verändern → Verse erzeugen → bewusst überarbeiten. „Vorherigen Bauplan wiederherstellen“ nimmt den letzten Beispielwechsel zurück (eine Stufe). Auswahl, bearbeitete Regeln und Sicherung werden lokal gespeichert. Die Beispiele sind eigens verfasstes Unterrichtsmaterial, keine Texte von Clara Lösel.
 
@@ -81,7 +81,7 @@ Im Regel-Editor unter **Meine Grammatikbibliothek** einen Namen eingeben und **U
 - **Auswahl als Grammatikdatei exportieren** speichert den ausgewählten Bibliothekseintrag als `.grammatik.json`. Für aktuelle Editoränderungen vorher erneut speichern.
 - **Grammatikdatei importieren** prüft Format, Version und Felder und ergänzt den Eintrag, ohne den Editor zu verändern. Gleiche Namen erhalten `(Import 2)`, `(Import 3)` usw. Danach den importierten Eintrag laden.
 
-Die Dateien enthalten ausschließlich Textdaten und werden nicht ausgeführt oder auf einen Server hochgeladen. Der bisherige reine Textexport ist unter **Regeln als Text herunterladen** weiterhin verfügbar; importierbar sind die neuen Grammatik-JSON-Dateien. Es gelten maximal 30 Bibliothekseinträge, 30.000 Zeichen pro Regel-/Wortfeldpaar und 180.000 Zeichen für die Bibliothek. Namen sind bis zu 80 Zeichen lang. Browserdaten-Löschen oder „Fortschritt löschen“ entfernt auch die lokale Bibliothek; wichtige Einträge vorher exportieren.
+Die Dateien enthalten ausschliesslich Textdaten und werden nicht ausgeführt oder auf einen Server hochgeladen. Der bisherige reine Textexport ist unter **Regeln als Text herunterladen** weiterhin verfügbar; importierbar sind die neuen Grammatik-JSON-Dateien. Es gelten maximal 30 Bibliothekseinträge, 30.000 Zeichen pro Regel-/Wortfeldpaar und 180.000 Zeichen für die Bibliothek. Namen sind bis zu 80 Zeichen lang. Browserdaten-Löschen oder „Fortschritt löschen“ entfernt auch die lokale Bibliothek; wichtige Einträge vorher exportieren.
 
 ## Inspirationsbibliothek
 
@@ -89,7 +89,7 @@ Unter `#inspiration` ergänzt eine frei zugängliche Materialbibliothek die fün
 
 Die Textkarten unterscheiden kurze Volltexte, Haupttext ohne PS und Auszüge. Jede hat eine PDF-Dateiseite, eine ausdrücklich als möglich gekennzeichnete Deutung und einen Arbeitsauftrag. Für das vollständige Buch können Lernende ihre eigene Datei lokal öffnen: Sie wird über eine temporäre Blob-URL im PDF-Viewer dieses Tabs angezeigt, nicht hochgeladen und nicht im Lernjournal gespeichert. Die Seiten werden mit dem mitgelieferten PDF.js-Viewer lokal gerendert; ein nativer PDF-Player ist nicht nötig. Abweichende Buchausgaben können andere Dateiseiten haben.
 
-Konkrete Instagram-Reels, YouTube-Videos, ARD-Sendungen, Verlagsinterviews, Podcasts und Porträts sind mit Herkunft und Prüfstand erfasst. YouTube-/Instagram-Player und ein verlinkter Deutschlandfunk-Audioplayer werden erst nach Klick geladen; dabei findet ein Kontakt zum jeweiligen Anbieter statt. Die prominent eingebauten Original-Reels auf Startseite und Inspirationsseite laden dagegen bereits beim Annähern an den sichtbaren Bereich. Einbettungen, Anmeldung und zeitlich begrenzte Mediatheksangebote liegen außerhalb der Kontrolle dieses Projekts. Die Originalquelle bleibt als Alternative erreichbar. Externe Medien und das vollständige Buch werden nicht im Repository gespeichert.
+Konkrete Instagram-Reels, YouTube-Videos, ARD-Sendungen, Verlagsinterviews, Podcasts und Porträts sind mit Herkunft und Prüfstand erfasst. YouTube-/Instagram-Player und ein verlinkter Deutschlandfunk-Audioplayer werden erst nach Klick geladen; dabei findet ein Kontakt zum jeweiligen Anbieter statt. Die prominent eingebauten Original-Reels auf Startseite und Inspirationsseite laden dagegen bereits beim Annähern an den sichtbaren Bereich. Einbettungen, Anmeldung und zeitlich begrenzte Mediatheksangebote liegen ausserhalb der Kontrolle dieses Projekts. Die Originalquelle bleibt als Alternative erreichbar. Externe Medien und das vollständige Buch werden nicht im Repository gespeichert.
 
 `dist/inspiration.js` enthält die redaktionell ausgewählten Materialien, Querverweise und die Filterfunktion. Details zur Recherche und Ausgabe stehen in `docs/inspiration-quellen.md`.
 
@@ -100,3 +100,5 @@ Die Startseite rückt Clara Lösel als Lyrikerin, Poetry Artist und literarische
 Porträtmotiv: https://claraloesel.de/wp-content/uploads/2026/07/keyvisual-claral-loesel-2.jpg (offizielle Website). Das Bild und die fremden Medien sind nicht von der MIT-Code-Lizenz umfasst. Der lokale Viewer verwendet PDF.js 6.5.438 aus dem offiziellen npm-Paket `pdfjs-dist`; Lizenz und mitgelieferte Hinweise unter `dist/vendor/pdfjs/`. Keine Buchdatei ist Bestandteil des Repositorys.
 
 Unter jedem der drei fest eingebetteten Original-Reels steht eine eigene kurze Schreibidee. **Dazu schreiben** öffnet die Schreibwerkstatt mit dieser Idee und dem Quellenlink. Vorhandene Entwürfe bleiben erhalten. Die Impulse erscheinen sowohl auf der Startseite als auch in der Inspirationsbibliothek.
+
+Die eigenen Oberflächentexte, Schreibaufträge, Beispielgrammatiken und Begleitdokumente verwenden Schweizer Rechtschreibung mit ss. Zitate und Originaltexte von Clara Lösel bleiben unverändert. Bereits eingegebene eigene Texte werden nicht automatisch umgeschrieben.

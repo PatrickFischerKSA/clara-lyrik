@@ -19,7 +19,7 @@ export function decodeLibrary(text){
  if(!Array.isArray(entries)||entries.length>30)throw Error('Die Bibliothek darf höchstens 30 Grammatiken enthalten.');
  const result=entries.map(namedGrammar),keys=result.map(x=>key(x.name));
  if(new Set(keys).size!==keys.length)throw Error('Die Bibliothek enthält doppelte Namen.');
- if(JSON.stringify(result).length>180000)throw Error('Die Grammatikbibliothek ist zu groß. Exportiere einzelne Grammatiken als Datei.');
+ if(JSON.stringify(result).length>180000)throw Error('Die Grammatikbibliothek ist zu gross. Exportiere einzelne Grammatiken als Datei.');
  return result;
 }
 export function putGrammar(library,entry,replace=false){
@@ -29,7 +29,7 @@ export function putGrammar(library,entry,replace=false){
  return decodeLibrary(JSON.stringify(next));
 }
 export function importGrammar(text){
- if(typeof text!=='string'||text.length>200000)throw Error('Die Grammatikdatei ist zu groß (maximal 200 KB).');
+ if(typeof text!=='string'||text.length>200000)throw Error('Die Grammatikdatei ist zu gross (maximal 200 KB).');
  let data;try{data=JSON.parse(text);}catch{throw Error('Die Datei enthält kein gültiges JSON. Verwende eine exportierte Grammatikdatei (.json).');}
  if(!data||data.format!==FORMAT||data.version!==1)throw Error('Dies ist keine unterstützte Grammatikdatei. Erwartet wird eine Lyriklabor-Grammatik, Version 1.');
  return namedGrammar(data.grammar);

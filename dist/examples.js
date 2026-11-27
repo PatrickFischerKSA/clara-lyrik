@@ -39,7 +39,7 @@ Antwort -> "ich antworte erst morgen." | "ich tue so, als hätte ich nichts geh�
  },
  {
   id:'wendung-suche',category:'Überraschende Wendungen',title:'Gesucht – gefunden · die Richtung wechseln',
-  description:'Die ersten Zeilen eröffnen eine Suche. Der Schluss richtet den Blick vom äußeren Ziel auf die sprechende Figur.',
+  description:'Die ersten Zeilen eröffnen eine Suche. Der Schluss richtet den Blick vom äusseren Ziel auf die sprechende Figur.',
   task:'Ändere Ziel und Suchort. Schreibe drei eigene Schlusszeilen: eine erwartbare, eine überraschende und eine offene. Welche lässt die ersten Zeilen anders erscheinen? Übernimm diese Fassung und begründe deine Wahl.',
   rules:String.raw`Gedicht -> "ich suchte" Ziel "\n" "an" Ort "." "\n\n" "gefunden habe ich" Fund "."`,
   words:`Ziel -> "den ausgang" | "deine antwort" | "einen neuen anfang"
@@ -47,12 +47,12 @@ Ort -> "allen haltestellen" | "den rändern alter fotos" | "den falschen türen"
 Fund -> "meine eigene frage" | "einen grund zu bleiben" | "den mut, nicht weiterzusuchen"`,start:'Gedicht',count:1
  },
  {
-  id:'wendung-klein',category:'Überraschende Wendungen',title:'Der große Moment wird klein',
-  description:'Eine große Erwartung trifft auf eine kleine Handlung. Ob die Wendung überzeugt, entscheidest du beim Überarbeiten.',
-  task:'Ersetze Erwartung und kleine Handlung durch eine konkrete Situation. Erzeuge zwei Fassungen. Streiche anschließend „stattdessen“ und prüfe, ob der Bruch ohne Erklärung stärker wirkt. Erfinde eine eigene letzte Zeile.',
+  id:'wendung-klein',category:'Überraschende Wendungen',title:'Der grosse Moment wird klein',
+  description:'Eine grosse Erwartung trifft auf eine kleine Handlung. Ob die Wendung überzeugt, entscheidest du beim Überarbeiten.',
+  task:'Ersetze Erwartung und kleine Handlung durch eine konkrete Situation. Erzeuge zwei Fassungen. Streiche anschliessend „stattdessen“ und prüfe, ob der Bruch ohne Erklärung stärker wirkt. Erfinde eine eigene letzte Zeile.',
   rules:String.raw`Gedicht -> "ich dachte," "\n" Erwartung "." "\n\n" "stattdessen" Handlung "." "\n" Schluss`,
   words:`Erwartung -> "mut müsste laut sein" | "ein anfang müsste glänzen" | "hoffnung müsste alles verändern"
 Handlung -> "stelle ich einen zweiten stuhl dazu" | "mache ich das fenster auf" | "frage ich noch einmal nach"
-Schluss -> "niemand klatscht. ich mache weiter." | "es ist wenig. es ist ein anfang." | "draußen geht jemand langsamer."`,start:'Gedicht',count:1
+Schluss -> "niemand klatscht. ich mache weiter." | "es ist wenig. es ist ein anfang." | "draussen geht jemand langsamer."`,start:'Gedicht',count:1
  }
 ];
