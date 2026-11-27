@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {lessons,validPatterns,analyze,generatePoem,validateSave} from '../dist/core.js';
+test('all lesson scans align with syllables and boundaries',()=>{for(const l of lessons){assert.ok(l.patterns.length);for(const p of l.patterns){assert.equal(p.length,l.syllables.length);assert.match(p,/^[01]+$/);for(let n=0;n<=p.length;n++)assert.ok(validPatterns(l,p.slice(0,n)).includes(p));}if(l.boundary)assert.ok(l.boundary>0&&l.boundary<l.syllables.length);}});
+test('analysis counts Unicode, repetitions, exact contexts and empty input',()=>{const a=analyze('Du hörst mich.\nDu hörst mich.','hörst');assert.equal(a.words,6);assert.equal(a.types,3);assert.equal(a.lines,2);assert.deepEqual(a.ngrams[0],['du hörst mich',2]);assert.equal(a.kwic.length,2);assert.equal(analyze('','').words,0);assert.equal(analyze('Schlüssel Ängste').types,2);});
+test('poet uses supplied vocabulary and rejects missing word fields',()=>{const p=generatePoem(['ein Schlüssel','ein Anfang','bleiben'],()=>0);assert.match(p,/du nennst es ein Schlüssel/);assert.match(p,/ich nenne es ein Anfang/);assert.throws(()=>generatePoem(['','','']));});
+test('import rejects wrong versions, unknown stations and non-string notes',()=>{assert.ok(validateSave({version:1,done:['lesen'],notes:{poem:'Hallo'}}));for(const bad of [null,{}, {version:2,done:[],notes:{}},{version:1,done:['admin'],notes:{}},{version:1,done:[],notes:{a:{}}}])assert.ok(!validateSave(bad));});
