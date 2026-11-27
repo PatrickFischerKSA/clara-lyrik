@@ -39,3 +39,7 @@ Basis: nur zwei Metren, ein anschauliches Bild, eine begründete Änderung. Erwe
 ## Material
 
 Rechtmäßig zugängliches Buch/PDF für „lange version.“. Kopfhörer für optionale externe Quellen. Ohne externe Plattformzugänge zwei eigene Lesarten vergleichen. Eigene fiktive Perspektiven sind möglich. Persönliches Vorlesen bleibt freiwillig. Einträge auf geteilten Geräten nach Export löschen.
+
+## Baupläne sammeln und austauschen
+
+Lernende speichern eigene Fassungen unter unterscheidbaren Namen, etwa „Fensterbilder – erste Fassung“ und „Fensterbilder – nach Feedback“. In der Grammatikbibliothek können sie die Fassungen später auswählen und laden. Eine Grammatikdatei exportiert einen einzelnen gespeicherten Stand und kann auf einem anderen Gerät oder von einer Partnerperson importiert werden. Importierte Einträge überschreiben weder vorhandene Namen noch den aktuellen Editor. Auftrag: Tauscht einen Bauplan als Datei aus, verändert nur ein Wortfeld und beschreibt, wie sich die Wirkung verändert. Die Entwürfe bleiben bewusst als solche speicherbar; die Regelprüfung ist ein getrennter Arbeitsschritt.

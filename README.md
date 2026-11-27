@@ -42,7 +42,7 @@ Kerntests überprüfen die metrischen Muster, Textanalyse, Generator und Sicheru
 
 ## Anpassen
 
-`dist/app.js`: Inhalte, Quellen und Werkstatt. `dist/core.js`: Übungen und reine Analysefunktionen. `dist/grammar.js`: Parser, Regelprüfung und begrenzte Texterzeugung. `dist/examples.js`: Beispielgrammatiken und Arbeitsaufträge. `dist/style.css`: Darstellung. `docs/unterricht.md`: Unterrichtsplanung; `docs/quellen.md`: Quellen und Unterschiede zu den Vorbildern.
+`dist/app.js`: Inhalte, Quellen und Werkstatt. `dist/core.js`: Übungen und reine Analysefunktionen. `dist/grammar.js`: Parser, Regelprüfung und begrenzte Texterzeugung. `dist/examples.js`: Beispielgrammatiken und Arbeitsaufträge. `dist/library.js`: benannte Grammatikbibliothek und portables Dateiformat. `dist/style.css`: Darstellung. `docs/unterricht.md`: Unterrichtsplanung; `docs/quellen.md`: Quellen und Unterschiede zu den Vorbildern.
 
 ## Rechte
 
@@ -71,3 +71,14 @@ Die vereinfachte Engine unterstützt keine D-Gram-Merkmalsvereinbarung wie `[NUM
 | Überraschende Wendungen | „Gesucht – gefunden“; „Der große Moment wird klein“ | Perspektivwechsel und Erwartungsbruch |
 
 Beispiel auswählen → Arbeitsauftrag lesen → in den Editor laden → Wortfelder verändern → Verse erzeugen → bewusst überarbeiten. „Vorherigen Bauplan wiederherstellen“ nimmt den letzten Beispielwechsel zurück (eine Stufe). Auswahl, bearbeitete Regeln und Sicherung werden lokal gespeichert. Die Beispiele sind eigens verfasstes Unterrichtsmaterial, keine Texte von Clara Lösel.
+
+## Eigene Grammatikbibliothek
+
+Im Regel-Editor unter **Meine Grammatikbibliothek** einen Namen eingeben und **Unter diesem Namen speichern** wählen. Gespeichert werden Regeln, Wortfelder, Startsymbol und Versanzahl. Die Bibliothek bleibt im Browser und wird in der JSON-Lernjournal-Sicherung mitgeführt. Unfertige Entwürfe dürfen ebenfalls gespeichert werden.
+
+- Über die Auswahl und **Gespeicherte Grammatik laden** einen Eintrag zurück in den Editor holen. Der bisherige Editorinhalt wird für die vorhandene Wiederherstellungsfunktion zwischengespeichert.
+- Erneutes Speichern unter demselben Namen ersetzt den gespeicherten Stand erst nach Bestätigung. Änderungen im Editor allein verändern keinen Bibliothekseintrag.
+- **Auswahl als Grammatikdatei exportieren** speichert den ausgewählten Bibliothekseintrag als `.grammatik.json`. Für aktuelle Editoränderungen vorher erneut speichern.
+- **Grammatikdatei importieren** prüft Format, Version und Felder und ergänzt den Eintrag, ohne den Editor zu verändern. Gleiche Namen erhalten `(Import 2)`, `(Import 3)` usw. Danach den importierten Eintrag laden.
+
+Die Dateien enthalten ausschließlich Textdaten und werden nicht ausgeführt oder auf einen Server hochgeladen. Der bisherige reine Textexport ist unter **Regeln als Text herunterladen** weiterhin verfügbar; importierbar sind die neuen Grammatik-JSON-Dateien. Es gelten maximal 30 Bibliothekseinträge, 30.000 Zeichen pro Regel-/Wortfeldpaar und 180.000 Zeichen für die Bibliothek. Namen sind bis zu 80 Zeichen lang. Browserdaten-Löschen oder „Fortschritt löschen“ entfernt auch die lokale Bibliothek; wichtige Einträge vorher exportieren.
