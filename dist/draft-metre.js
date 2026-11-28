@@ -1,4 +1,4 @@
-import {scanPattern} from './bodo/metre.js?v=2.5.0';
+import {scanPattern} from './bodo/metre.js?v=2.5.1';
 
 const LIMIT = 12000;
 const normalize = text => String(text ?? '').replace(/\r\n?/g, '\n').normalize('NFC');

@@ -1,4 +1,4 @@
-import {activeWord,parseReadAlong,textParts} from './readalong.js?v=2.5.0';
+import {activeWord,parseReadAlong,textParts} from './readalong.js?v=2.5.1';
 const esc=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function mountReadAlong(root,{id,record,saved,onSave}){
  let text=record?.text||'',cues=[],custom=false,url=null,raf=0,active=-1,disposed=false;

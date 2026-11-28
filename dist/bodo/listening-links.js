@@ -1,6 +1,6 @@
-import {MEDIA,TOPICS} from './data.js?v=2.5.0';
-import {LEARNING_GRAMMARS} from './grammar-examples.js?v=2.5.0';
-import {learningDrafts,fourVerseLines} from './grammar-tools.js?v=2.5.0';
+import {MEDIA,TOPICS} from './data.js?v=2.5.1';
+import {LEARNING_GRAMMARS} from './grammar-examples.js?v=2.5.1';
+import {learningDrafts,fourVerseLines} from './grammar-tools.js?v=2.5.1';
 
 export function workshopRoute(hash){
  const [path,query='']=String(hash).replace(/^#/,'').split('?');

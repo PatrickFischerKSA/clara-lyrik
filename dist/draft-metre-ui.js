@@ -1,4 +1,4 @@
-import {decodeDraftAnalysis, updateDraftAnalysis, parseSegmentation, reconcileLines, describeLine, rhythmSteps} from './draft-metre.js?v=2.5.0';
+import {decodeDraftAnalysis, updateDraftAnalysis, parseSegmentation, reconcileLines, describeLine, rhythmSteps} from './draft-metre.js?v=2.5.1';
 
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const KEY = 'draft-metre-v1';

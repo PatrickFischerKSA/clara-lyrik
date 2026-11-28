@@ -1,5 +1,5 @@
-import {compileGrammar,generateFromGrammar} from '../grammar.js?v=2.5.0';
-import {namedGrammar} from '../library.js?v=2.5.0';
+import {compileGrammar,generateFromGrammar} from '../grammar.js?v=2.5.1';
+import {namedGrammar} from '../library.js?v=2.5.1';
 
 // Preserve each generated stanza separately; a custom start may produce a different line count.
 export function learningDrafts(entry,random=Math.random){
