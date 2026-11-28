@@ -45,7 +45,17 @@ Unter jedem Hörbeispiel stehen ein kurzer Schreibimpuls, der Name der passenden
 
 Die Links verwenden `#werkstatt?hoerbeispiel=er`, `mito`, `barbara` oder `dach` und können geteilt werden. Ein unbekannter Bezeichner öffnet die gewöhnliche Werkstatt. Jeder Höranschluss erhält einen eigenen lokalen Entwurf (`ws-hoeren-…` und `dg-hoeren-…`). Vorhandene Fachentwürfe und gespeicherte Grammatiken werden nicht überschrieben; beim Wiederkommen werden eigene Änderungen wieder angezeigt. Die neuen Beispiele sind eigenes Übungsmaterial, keine Transkripte der Originale.
 
-Zusätzliche Fachquellen sind [OpenStax zu Mitochondrien](https://openstax.org/books/biology-2e/pages/4-3-eukaryotic-cells), [IDS grammis zur Komposition](https://grammis.ids-mannheim.de/sgt/2245?termini=term) und [Universität Kiel zu Tropen und Figuren](https://www.klassalt.uni-kiel.de/de/studium/allgemeine-materialien-1/tropen-und-figuren). `listening-links.js` verbindet Medien, Beispielgrammatiken und eigene Schreibkontexte.
+Zusätzliche Fachquellen sind [OpenStax zu Mitochondrien](https://openstax.org/books/biology-2e/pages/4-3-eukaryotic-cells), [IDS grammis zur Komposition](https://grammis.ids-mannheim.de/sgt/2245?termini=term) und [Universität Kiel zu Tropen und Figuren](https://www.klassalt.uni-kiel.de/de/studium/allgemeine-materialien-1/tropen-und-figuren). `listening-links.js` verbindet Medien, Beispielgrammatiken und eigene Schreibkontexte; `hearing-notes.js` ergänzt die gemeinsame Notiz, die Sammlung und die Anlage eigener Wortfelder. `workshop-switch.css` gestaltet die gemeinsamen Direktlinks.
+
+### Hörnotizen als eigenes Schreibmaterial
+
+Im Editor jedes Höranschlusses erscheint die zugehörige Notiz. Sie verwendet denselben Journaleintrag `clip-…` wie das Hörbeispiel; Änderungen sind beim Zurückkehren dort sichtbar. Daneben steht eine eigene Sammlung ausgewählter Wörter und Wendungen. Notizzeilen können ohne doppelte Einträge ergänzt, gekürzt und umformuliert werden. Zeitangaben werden nicht automatisch entfernt, damit die ursprüngliche Formulierung nicht verändert wird.
+
+Aus der Sammlung wird ein benanntes, anschliessend normal bearbeitbares Wortfeld. Auf Wunsch ergänzt der Editor eine neue Startregel mit vier Versanfängen: Erinnern, Ordnen, Erklären und Weiterfragen. Vorhandene Regeln und Wortfelder bleiben erhalten; die neue Startregel erhält bei Namenskonflikten einen Zusatz. Die Änderung lässt sich mit der vorhandenen Wiederherstellung zurücknehmen. Die erzeugten Zeilen sind Schreibanfänge, keine fertigen fachlichen Erklärungen. Die Versfelder bleiben bis zur bewussten Übernahme unverändert.
+
+Hörnotiz, ausgewählte Sammlung und Wortfeld haben getrennte Aufgaben: Quelle beobachten, sprachliches Material auswählen, damit schreiben. Die Sammlung und das neue Wortfeld gehören zur vorhandenen Journal-Sicherung. Die Sammlung wird nach eigenen Änderungen nicht ungefragt durch neue Hörnotizen ersetzt.
+
+Eine auf beiden Seiten dauerhaft sichtbare Leiste führt direkt zu den Schreibwerkstätten von Clara Lösel und Bodo Wartke. Zusätzliche Links im jeweiligen Werkstatteinstieg führen ebenfalls direkt zur anderen Schreibwerkstatt. Die lokalen Journale bleiben getrennt; das gemeinsame Grammatikdateiformat erlaubt weiterhin den bewussten Austausch einzelner Grammatiken.
 
 ## Fachliche und didaktische Grenzen
 
