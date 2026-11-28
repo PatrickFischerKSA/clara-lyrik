@@ -117,3 +117,6 @@ Unter **Deine Wörter und Bilder** lassen sich einzelne Wörter und ganze Wendun
 
 
 Jedes bearbeitbare Wortfeld bietet **Umbenennen** und **Wortfeld löschen**. Beim Umbenennen werden ganze Bausteinnamen in den Regeln und Wortfeldern sowie das Startsymbol angepasst; Text in Anführungszeichen und Kommentare bleiben unverändert. Bei verwendeten Feldern lässt sich zum Löschen ein anderes vorhandenes Wortfeld als Ersatz wählen, das alle Verweise übernimmt. Fehlt ein Ersatz, bleibt das Feld erhalten. Umbenennen und Löschen lassen sich über „Vorherigen Bauplan wiederherstellen“ zurücknehmen. Die benannte Bibliothek bleibt bis zum erneuten Speichern unverändert.
+
+
+Die responsive Darstellung wurde für Smartphone, Tablet und Desktop überarbeitet. Prüfbereiche, Bildschirmbreiten und Änderungen sind in [docs/lesbarkeit.md](docs/lesbarkeit.md) dokumentiert. Die ergänzenden Regeln liegen in `dist/readability.css`.
