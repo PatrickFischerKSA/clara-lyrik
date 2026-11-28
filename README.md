@@ -4,11 +4,17 @@ Eine gemeinsame interaktive Lyrikwerkstatt für Sekundarstufe II. [Online öffne
 
 ## Ein gemeinsamer Einstieg
 
-Die Startseite führt zu beiden Künstlern, einem interaktiven Zeilenversuch, beiden Schreibweisen und einer gemeinsamen Sammlung. Originalporträt und offizielle Videovorschaubilder zeigen die Personen. Wartkes Einstieg beginnt mit «Barbaras Rhabarberbar», sechs weiteren Originalvideos und einem Wortspiel: einen Begriff eingeben, als Figur auftreten lassen, eine Wendung versuchen, die eigene Zeile bearbeiten und in die Werkstatt mitnehmen. Fachformulare sind dort erst auf Wunsch sichtbar. Die Originalplayer laden nach Klick; externe Vorschaubilder werden schon bei der Ansicht vom Anbieter abgerufen.
+Die Startseite stellt beide Künstler mit Bildern und direkten Links zu den Originalbeiträgen vor. Ein gemeinsamer Schreibbereich bietet Entwurf, Notizen und die jeweiligen Werkzeuge. Die Originalplayer laden nach Klick; externe Vorschaubilder werden schon bei der Ansicht vom Anbieter abgerufen.
 
-Lösel: Original-Reels, Schreibimpulse, Textbeobachtung, Rhythmusspiel und Gedichtwerkstatt. Wartke: Originalvideos, Gedichtform, Sprechpuls, aktives Abrufen und Lernverse in Biologie, Deutsch, Mathematik, Physik und Geschichte. Die Werkstätten behalten ihre vollständigen D-Gram-Editoren und bisherigen Entwürfe. Das Wortspiel kann eine eigene erste Zeile als Wortfeld ergänzen, ohne bisherige Regeln zu ersetzen.
+Lösel: Original-Reels, Schreibvorschläge, Textbeobachtung, Rhythmusspiel und Gedichtwerkstatt. Wartke: Originalvideos, Gedichtform, Sprechpuls, Gedächtnisversuch und eigene Lernverse. Beide behalten ihre D-Gram-Editoren, gespeicherten Grammatiken und bisherigen Texte. Fachübungen und technische Werkzeuge lassen sich bei Bedarf öffnen.
 
 Routen: `#clara/inspiration`, `#wartke/start`, `#schreiben/clara`, `#schreiben/wartke`, `#sammlung` und `#vergleich`. Alte Clara-Links und `/bodo/`-Links werden in die gemeinsame Navigation übernommen. Hörbeispiel-Direktlinks behalten ihre Grammatik und getrennten Entwurfskontexte.
+
+## Redaktion und Schreibansicht
+
+Die Oberfläche verwendet kurze Sachbezeichnungen statt Werbesprüchen. Beide Schreibwerkstätten öffnen mit einem Textfeld und Notizen; die Werkzeuge bleiben separat erreichbar. Gemeinsame Darstellung in `dist/editorial.css`: kleinere Überschriften, weniger Rahmen und Farbverläufe, helle Schreibfläche im dunklen Layout. Originalgedichte, Liedtitel und Medienquellen sind von der redaktionellen Überarbeitung ausgenommen.
+
+Das frühere Wartke-Wortspiel wurde entfernt. Nur exakt unveränderte, automatisch erzeugte Vorschläge werden unter «Vorschlag aus der früheren Version» aufbewahrt; eigene und bearbeitete Texte bleiben im Schreibfeld. Eine Sicherung enthält auch die aufbewahrten Vorschläge. `writing-draft.js` prüft die Übernahme ohne Textverlust.
 
 ## Originaltracks nach Themen
 
