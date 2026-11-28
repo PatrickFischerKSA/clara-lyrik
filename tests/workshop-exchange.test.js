@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {exchangeCatalog,copyExchangeGrammar,copyExchangeWordField,copyExchangeWordFields} from '../dist/workshop-exchange.js';
+import {exchangeCatalog,copyExchangeGrammar,copyExchangeGrammars,copyExchangeWordField,copyExchangeWordFields} from '../dist/workshop-exchange.js';
 import {emptyJournal} from '../dist/bodo/core.js';
 import {compileGrammar,generateFromGrammar} from '../dist/grammar.js';
 import {readWordFields} from '../dist/wordfields.js';
@@ -25,6 +25,24 @@ test('Whole grammar copies preserve unfinished rules and use collision-safe name
  const result=copyExchangeGrammar(library,source);assert.equal(result.entry.name,'Meine Wörter (Kopie 3)');assert.equal(result.entry.rules,source.rules);assert.equal(library.length,2);assert.equal(source.name,'Meine Wörter');
  result.entry.words='changed';assert.equal(source.words,grammar.words);
  const full=Array.from({length:30},(_,i)=>({...grammar,name:'Grammatik '+i}));assert.throws(()=>copyExchangeGrammar(full,grammar),/30/);assert.equal(full.length,30);
+});
+
+test('Multiple grammar copies resolve conflicts across the selection and preserve each source',()=>{
+ const source=[{...grammar,name:'MEINE WÖRTER',rules:'S -> "noch offen'},{...grammar,rules:'S -> "andere Fassung"'}],library=[grammar];
+ const before=JSON.stringify({source,library}),result=copyExchangeGrammars(library,source);
+ assert.deepEqual(result.entries.map(e=>e.name),['MEINE WÖRTER (Kopie 2)','Meine Wörter (Kopie 3)']);
+ assert.equal(result.library.length,3);assert.deepEqual(result.entries.map(e=>e.rules),source.map(e=>e.rules));
+ assert.equal(JSON.stringify({source,library}),before);
+ result.entries[0].rules='changed';assert.notEqual(source[0].rules,'changed');
+});
+
+test('A grammar batch fails as a whole if a later entry is invalid or the library becomes full',()=>{
+ const library=Array.from({length:29},(_,i)=>({...grammar,name:'Vorhanden '+i})),before=JSON.stringify(library);
+ assert.throws(()=>copyExchangeGrammars(library,[grammar,grammar]),/30/);
+ assert.equal(JSON.stringify(library),before);
+ assert.throws(()=>copyExchangeGrammars([],[grammar,{...grammar,count:0}]),/1 und 24/);
+ assert.throws(()=>copyExchangeGrammars([],[]),/mindestens/);
+ assert.throws(()=>copyExchangeGrammars([],Array(31).fill(grammar)),/höchstens 30/);
 });
 test('Individual fields are appended safely, preserving literals, existing references and draft text',()=>{
  const current={...grammar,words:'Bild -> "vorhanden"\nbild_2 -> "auch vorhanden"'},values=['<b>Bild</b> "ja" | nein','erste\nzweite','Pfad\\Name'];

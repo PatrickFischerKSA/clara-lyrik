@@ -1,5 +1,5 @@
 import {workshopRoute,listeningWorkshop} from './listening-links.js?v=1.2.0';
-import {grammarEditorHTML,mountGrammarEditor} from './grammar-editor.js?v=1.5.0';
+import {grammarEditorHTML,mountGrammarEditor} from './grammar-editor.js?v=1.6.0';
 import {MEDIA,SOURCES,TOPICS,FORM_LINES,FORMS,FACT_CHECKS} from './data.js?v=1.2.0';
 import {emptyJournal,decodeJournal,validateJournal,startRecall,hideRecall,compareRecall,saveAttempt,scoreRecall,termCoverage,rhymeScheme,endWords} from './core.js?v=1.1.0';
 const $=selector=>document.querySelector(selector),esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

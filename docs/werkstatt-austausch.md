@@ -5,15 +5,21 @@ Beide D-Gram-Editoren enthalten den Bereich «Aus … Werkstatt übernehmen». D
 - [Austausch in der Lösel-Werkstatt](https://patrickfischerksa.github.io/clara-lyrik/#werkstatt?editor=regeln)
 - [Austausch in der Wartke-Werkstatt](https://patrickfischerksa.github.io/clara-lyrik/bodo/#werkstatt?editor=regeln)
 
-## Eine Grammatik übernehmen
+## Eine oder mehrere Grammatiken übernehmen
 
-Bearbeite zunächst eine Grammatik in einer der Werkstätten oder speichere sie dort unter einem Namen. Der Link «Zu … Regel-Editor» führt unmittelbar zur anderen Werkstatt. Wähle dort den aktuellen Entwurf oder einen gespeicherten Eintrag als Quelle. Bei Wartke sind die Fachbereiche und die einzelnen Höranschlüsse in der Auswahl getrennt bezeichnet.
+Bearbeite zunächst eigene Grammatiken in einer der Werkstätten oder speichere sie dort unter einem Namen. Der Link «Zu … Regel-Editor» führt unmittelbar zur anderen Werkstatt. Dort stehen die eigenen Editorentwürfe und gespeicherten Grammatiken als Liste mit Kontrollkästchen bereit. Bei Wartke sind die Fachbereiche und die einzelnen Höranschlüsse getrennt bezeichnet.
 
-Die Vorschau zeigt Regeln, Wortfelder, Startsymbol und Anzahl. Mit «Grammatik übernehmen» kommt eine eigene Kopie in die lokale Grammatikbibliothek der Zielwerkstatt. Ein bereits verwendeter Name erhält einen Zusatz wie «(Kopie 2)». Die Originalgrammatik bleibt erhalten. Auch unfertige Regelsyntax kann kopiert werden; unvollständige Einstellungen wie eine ungültige Anzahl müssen zunächst in der Quellwerkstatt korrigiert werden.
+Markiere die gewünschten Grammatiken oder verwende «Alle Grammatiken auswählen». «Grammatikauswahl aufheben» entfernt die Markierungen. Jede Grammatik hat eine Vorschau ihrer Regeln, Wortfelder, ihres Startsymbols und ihrer Anzahl. Ein Zähler zeigt die Auswahl; eine weitere Angabe zeigt die Belegung deiner Sammlung mit höchstens 30 Grammatiken.
 
-Ist «Kopie gleich im aktuellen Editor öffnen» ausgewählt, erscheint die Kopie sofort dort. Der vorherige Editorinhalt wird mit der vorhandenen Wiederherstellung aufgehoben. Ohne diese Option bleibt der Editor unverändert und die Kopie lässt sich später aus der eigenen Bibliothek laden. Gedicht- und Versfelder bleiben erhalten.
+Mit «Ausgewählte Grammatiken übernehmen» kommen alle gewählten Grammatiken gemeinsam als eigene Kopien in die Bibliothek der Zielwerkstatt. Bereits verwendete Namen erhalten Zusätze wie «(Kopie 2)». Die Namen der zuvor angelegten Kopien derselben Gruppe werden dabei ebenfalls berücksichtigt. Die Originalgrammatiken bleiben erhalten.
+
+Die gemeinsame Übernahme wird vollständig vorbereitet, bevor die Zielbibliothek geändert wird. Reichen beispielsweise Platz oder Gesamtgrösse nicht aus, kommt keine der ausgewählten Grammatiken hinzu. Auch unfertige Regelsyntax kann kopiert werden; unvollständige Einstellungen wie eine ungültige Anzahl müssen zunächst in der Quellwerkstatt korrigiert werden.
+
+Standardmässig bleiben die aktuellen Regeln im Editor erhalten. Mit «Eine übernommene Grammatik gleich im Editor öffnen» lässt sich zusätzlich genau eine der ausgewählten Grammatiken bestimmen, die nach der Übernahme geöffnet wird. Der vorherige Editorstand lässt sich anschliessend über die vorhandene Wiederherstellung zurückholen. Alle gespeicherten Kopien bleiben in der Bibliothek. Gedicht- und Versfelder bleiben erhalten.
 
 Die Anzahl meint Erzeugungen des Startsymbols. In der Lösel-Werkstatt kann eine Erzeugung eine einzelne Zeile sein; in Wartkes Beispielen ist sie häufig bereits eine vierzeilige Fassung. Diese Einstellung wird beim Kopieren beibehalten. Die Wartke-Übernahme in die vier Versfelder verlangt weiterhin genau vier ausgefüllte Zeilen.
+
+Die zusätzliche Quellgrammatik-Auswahl unterhalb der Grammatiken bestimmt die Einzelvorschau und die Wortfelder für eine gesonderte Wortfeldübernahme. Beim Neueinlesen der anderen Werkstatt werden die Grammatikauswahl und die Wortfeldauswahl zurückgesetzt.
 
 ## Ein oder mehrere Wortfelder übernehmen
 

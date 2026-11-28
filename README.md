@@ -10,7 +10,7 @@ Planung und Quellen stehen in [docs/bodo-unterricht.md](docs/bodo-unterricht.md)
 
 ## Direkt zwischen den Werkstätten übernehmen
 
-Beide D-Gram-Editoren lesen eigene Entwürfe, gespeicherte Grammatiken und ein oder mehrere Wortfelder aus der jeweils anderen Werkstatt im selben Browser. Kontrollkästchen, «Alle Wortfelder auswählen» und «Auswahl aufheben» ermöglichen eine gemeinsame Übernahme mit eigenem Namen pro Feld. Bei einem Fehler wird keines der ausgewählten Felder eingefügt. Eine Vorschau und die Wahl zwischen ganzer Grammatik und Wortfeld erlauben den Austausch ohne Exportdatei. Neue Kopien erhalten bei Namenskonflikten einen Zusatz. Der aktuelle Editor kann beim Laden einer Grammatik wiederhergestellt werden; Gedicht- und Versfelder bleiben erhalten.
+Beide D-Gram-Editoren lesen eigene Entwürfe, mehrere auswählbare gespeicherte Grammatiken und ein oder mehrere Wortfelder aus der jeweils anderen Werkstatt im selben Browser. Kontrollkästchen, «Alle Wortfelder auswählen» und «Auswahl aufheben» ermöglichen eine gemeinsame Übernahme mit eigenem Namen pro Feld. Bei einem Fehler wird keines der ausgewählten Felder eingefügt. Grammatiken lassen sich ebenfalls per Kontrollkästchen gemeinsam als Kopien übernehmen. Eine ausgewählte Kopie kann auf Wunsch sofort im Editor geöffnet werden; alle anderen bleiben in der Sammlung. Vorschauen und gemeinsame Übernahmen erlauben den Austausch ohne Exportdatei. Neue Kopien erhalten bei Namenskonflikten einen Zusatz. Der aktuelle Editor kann beim Laden einer Grammatik wiederhergestellt werden; Gedicht- und Versfelder bleiben erhalten.
 
 Die Direktlinks `#werkstatt?editor=regeln` öffnen den jeweiligen Austauschbereich. [Bedienung und technische Grenzen](docs/werkstatt-austausch.md).
 
