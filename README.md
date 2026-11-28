@@ -120,3 +120,6 @@ Jedes bearbeitbare Wortfeld bietet **Umbenennen** und **Wortfeld löschen**. Bei
 
 
 Die responsive Darstellung wurde für Smartphone, Tablet und Desktop überarbeitet. Prüfbereiche, Bildschirmbreiten und Änderungen sind in [docs/lesbarkeit.md](docs/lesbarkeit.md) dokumentiert. Die ergänzenden Regeln liegen in `dist/readability.css`.
+
+
+Unter zwei sicher zugeordneten Original-Reels stehen die vollständigen Buchgedichte zum Mitlesen bereit. Alle Reel-Karten unterstützen lokal ergänzte Texte, eigene Aufnahmen und geprüfte Wort-Zeitmarken. Die Synchronisation läuft am eigenen Player; der Instagram-Embed wird nicht als verfügbare Wiedergabeuhr ausgegeben. Quellen, fehlende Medien und Dateiformat: [docs/mitlesen.md](docs/mitlesen.md).

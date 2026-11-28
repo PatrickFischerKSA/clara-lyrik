@@ -1,0 +1,38 @@
+import {activeWord,parseReadAlong,textParts} from './readalong.js?v=1.9.0';
+const esc=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export function mountReadAlong(root,{id,record,saved,onSave}){
+ let text=record?.text||'',cues=[],custom=false,url=null,raf=0,active=-1,disposed=false;
+ try{if(saved){const local=JSON.parse(saved);if(local.words?.length){const checked=parseReadAlong(saved,text);text=checked.text;cues=checked.words;}else if(typeof local.text==='string'&&local.text.length<=30000)text=local.text;custom=true;}}catch{}
+ root.innerHTML=`<details class="readalong-panel"><summary>${record?'Gedicht mitlesen':'Mitlesetext ergänzen'}</summary><div class="readalong-content"><h4>${esc(record?.title||'Text zum Reel')}</h4><p class="small ra-source"></p><video class="ra-media" controls playsinline preload="metadata" hidden aria-label="Eigene Aufnahme zum Mitlesen"></video><label class="ra-position" hidden><span>Position in der Aufnahme</span><input class="ra-seek" type="range" min="0" max="0" step="0.1" value="0" disabled aria-label="Position in der Aufnahme"><output>0:00</output></label><div class="ra-text" tabindex="0" role="article" aria-label="Mitlesetext"></div><label class="field" for="ra-media-${id}">Eigene Audio- oder Videoaufnahme auswählen</label><input id="ra-media-${id}" class="ra-file" type="file" accept="audio/*,video/*"><p class="small">Die Aufnahme bleibt in diesem Tab. Die Wortmarkierung folgt diesem Player, nicht dem eingebetteten Instagram-Reel.</p><p class="ra-status small" role="status" aria-live="polite"></p><details class="ra-setup" ${text?'':'open'}><summary>Text und Wortmarkierung einrichten</summary><label class="field" for="ra-text-${id}">Textfassung mit Zeilenumbrüchen</label><textarea id="ra-text-${id}" maxlength="30000" rows="6">${esc(text)}</textarea><button class="ra-save-text">Text lokal übernehmen</button><label class="field" for="ra-timings-${id}">Datei mit Wort-Zeitmarken auswählen (.json)</label><input id="ra-timings-${id}" class="ra-timings" type="file" accept="application/json,.json"><p class="small">Die Zeitmarken müssen zur gewählten Aufnahme und zu jedem Wort dieser Textfassung passen. Sie werden nicht geschätzt. Text und Zeitmarken bleiben lokal und sind Teil deiner Journal-Sicherung.</p><button class="ra-export">Text und Zeitmarken exportieren</button></details></div></details>`;
+ const $=s=>root.querySelector(s),panel=$('.readalong-panel'),reader=$('.ra-text'),source=$('.ra-source'),status=$('.ra-status'),editor=$('textarea'),media=$('video');
+ const save=()=>onSave(JSON.stringify({text,words:cues}));
+ const message=value=>{status.textContent=value;};
+ const describe=()=>{source.textContent=custom?'Lokale Textfassung.':record?`Clara Lösel: Wehe du gibst auf. Gedicht ${record.number}/101 · PDF-Dateiseiten ${record.pages.join(', ')} · NOW, 18. Auflage 2026. Buchfassung; der Vortrag kann abweichen. Rechte bei der Autorin / dem Verlag.`:'Für dieses Reel ist noch keine sicher zugeordnete Originaltextfassung hinterlegt. Du kannst eine eigene verfügbare Textfassung lokal hinzufügen.';};
+ const draw=()=>{reader.innerHTML=text?textParts(text).map(part=>part.index===undefined?esc(part.value):`<span data-word="${part.index}">${esc(part.value)}</span>`).join(''):'<p>Noch kein Mitlesetext vorhanden.</p>';active=-1;describe();$('.ra-export').disabled=!text;};
+ const mark=index=>{
+  if(index===active)return;
+  reader.querySelector('[aria-current]')?.removeAttribute('aria-current');active=index;
+  const word=reader.querySelector(`[data-word="${index}"]`);
+  if(word){word.setAttribute('aria-current','true');if(panel.open){const r=reader.getBoundingClientRect(),w=word.getBoundingClientRect();if(w.top<r.top+12||w.bottom>r.bottom-12)reader.scrollTop+=w.top-r.top-reader.clientHeight/3;}}
+ };
+ const durationFits=()=>!Number.isFinite(media.duration)||!cues.length||cues.at(-1).end<=media.duration+.25;
+ const seek=$('.ra-seek'),position=$('.ra-position'),clock=$('output');
+ const format=value=>`${Math.floor((value||0)/60)}:${String(Math.floor((value||0)%60)).padStart(2,'0')}`;
+ const update=()=>{mark(url&&durationFits()?activeWord(cues,media.currentTime):-1);seek.value=String(media.currentTime||0);clock.textContent=`${format(media.currentTime)} / ${format(Number.isFinite(media.duration)?media.duration:0)}`;};
+ seek.oninput=()=>{media.currentTime=Number(seek.value);update();};
+ const announce=()=>message(!text?'Füge zuerst die Textfassung hinzu.':!cues.length?'Text zum Mitlesen verfügbar. Für eine synchrone Wortmarkierung fehlen noch geprüfte Wort-Zeitmarken.':!url?'Wort-Zeitmarken geladen. Wähle die dazugehörige Aufnahme aus.':!durationFits()?'Die Aufnahme ist kürzer als die Zeitmarken. Wähle die passende Aufnahme; die Markierung bleibt bis dahin aus.':'Wortmarkierung bereit. Starte die eigene Aufnahme mit dem Player.');
+ const tick=()=>{if(disposed)return;update();if(!media.paused&&!media.ended)raf=requestAnimationFrame(tick);};
+ media.addEventListener('play',()=>{cancelAnimationFrame(raf);tick();});
+ media.addEventListener('pause',()=>{cancelAnimationFrame(raf);update();});
+ for(const event of ['timeupdate','seeking','seeked'])media.addEventListener(event,update);
+ media.addEventListener('ended',()=>{cancelAnimationFrame(raf);mark(-1);});
+ media.addEventListener('loadedmetadata',()=>{seek.disabled=!Number.isFinite(media.duration);seek.max=String(Number.isFinite(media.duration)?media.duration:0);announce();update();});
+ media.addEventListener('error',()=>message('Diese Aufnahme konnte nicht abgespielt werden. Wähle eine vom Browser unterstützte Audio- oder Videodatei.'));
+ panel.addEventListener('toggle',()=>{if(!panel.open){media.pause();return;}const feed=root.closest('.reel-feed'),tile=root.closest('.reel-tile');if(feed&&tile)feed.scrollTo({left:feed.scrollLeft+tile.getBoundingClientRect().left-feed.getBoundingClientRect().left-4,behavior:'auto'});});
+ $('.ra-file').onchange=event=>{const file=event.target.files[0];if(!file)return;if(!/^(audio|video)\//.test(file.type)&&! /\.(mp3|mp4|m4a|wav|ogg|webm|mov)$/i.test(file.name))return message('Wähle eine Audio- oder Videodatei.');media.pause();if(url)URL.revokeObjectURL(url);url=URL.createObjectURL(file);media.src=url;media.hidden=false;position.hidden=false;seek.disabled=true;media.classList.toggle('ra-audio',file.type.startsWith('audio/'));media.load();mark(-1);announce();};
+ $('.ra-save-text').onclick=()=>{const next=editor.value;if(!next.trim())return message('Füge zuerst die Textfassung hinzu.');if(next.length>30000)return message('Der Text darf höchstens 30.000 Zeichen enthalten.');media.pause();if(text!==next)cues=[];text=next;custom=true;save();draw();announce();};
+ $('.ra-timings').onchange=async event=>{const input=event.target;try{const file=input.files[0];if(!file)return;if(file.size>1000000)throw Error('Die Zeitmarkendatei ist zu gross (maximal 1 MB).');const checked=parseReadAlong(await file.text(),text);if(disposed)return;media.pause();text=checked.text;cues=checked.words;custom=text!==record?.text;editor.value=text;save();draw();announce();update();}catch(error){message(error.message+' Die bisherige Fassung bleibt erhalten.');}finally{input.value='';}};
+ $('.ra-export').onclick=()=>{const blob=new Blob([JSON.stringify({text,words:cues},null,2)],{type:'application/json'}),downloadURL=URL.createObjectURL(blob),a=document.createElement('a');a.href=downloadURL;a.download=`mitlesen-${id}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(downloadURL),1000);};
+ draw();announce();
+ return ()=>{disposed=true;media.pause();cancelAnimationFrame(raf);if(url)URL.revokeObjectURL(url);};
+}
