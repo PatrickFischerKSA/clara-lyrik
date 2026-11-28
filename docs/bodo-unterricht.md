@@ -100,7 +100,7 @@ Im Regel-Editor können mehrere eigene Lösel-Entwürfe und gespeicherte Grammat
 
 «Tracks & Themen» enthält zusätzlich drei überprüfte Originale mit Themenfiltern und eigenen Werkstattübergängen:
 
-- **Das Grundgesetz** (2019), Bodo Wartke & Die SchönenGutenA-Band: Rap zu den ersten fünf Artikeln des deutschen Grundgesetzes. Abgleich mit dem Originalgesetz, Artikelfolge als Erinnerungsgerüst. Eigene Grammatik zu Würde, Gleichheit, Freiheit und Schranken. Kein Track über die Schweizer Verfassungsdaten. [Original](https://vimeo.com/337726716), [Kontext](https://www.bodowartke.de/presse_dasgrundgesetz).
+- **Das Grundgesetz** (2019), Bodo Wartke & Die SchönenGutenA-Band: Rap zu den ersten fünf Artikeln des deutschen Grundgesetzes. Abgleich mit dem Originalgesetz, Artikelfolge als Erinnerungsgerüst. Eigene Grammatik zu Würde, Gleichheit, Freiheit und Schranken. [Original](https://vimeo.com/337726716), [Kontext](https://www.bodowartke.de/presse_dasgrundgesetz).
 - **Die heiligen Schriften 2.0** (2020): Künstlerische Kritik am fanatisch motivierten Missbrauch religiöser Texte. Sprecherposition, Auslegung und pauschale Zuschreibung unterscheiden. Eigene Grammatik zu Beobachtung, Unterscheidung, Frage und Prüfung. [Original](https://www.youtube.com/watch?v=88eVuCRlnuA), [Kontext](https://www.bodowartke.de/presse_heiligeschriften).
 - **Hambacher Wald** (2018): Protestlied nach einem Besuch im Hambacher Forst. Beschreibung, Wertung und Anliegen unterscheiden; den Entstehungskontext beachten. Eigene Grammatik zu Ort, Bild, Frage und begründeter Forderung. [Original](https://www.youtube.com/watch?v=tTKcnlp0x_Y), [Kontext](https://www.bodowartke.de/presse_hambacher_wald).
 

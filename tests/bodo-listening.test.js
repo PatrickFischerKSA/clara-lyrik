@@ -47,5 +47,5 @@ test('Non-biology originals lead to their own subjects, never the Swiss chronolo
   assert.notDeepEqual(handoff.topic.facts,TOPICS.find(t=>t.id==='history').facts);
  }
  assert.ok(!MEDIA.some(m=>['math','physics','history'].includes(m.transfer)));
- assert.match(listeningWorkshop('grundgesetz').media.description,/Deutschland.*Schweizer/);
+ assert.match(listeningWorkshop('grundgesetz').media.description,/ersten fünf Artikel/);
 });
