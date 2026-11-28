@@ -2,6 +2,12 @@
 
 Eine atmosphärische, interaktive Lyrikeinheit zu Clara Lösel für Sekundarstufe II (ab 16 Jahren), 90–105 Minuten. Deutschsprachig, ohne Installationsschritt oder Backend. Auf GitHub Pages auch unter einem Repository-Unterpfad lauffähig.
 
+## Zweite Ressource: Bodo Wartke
+
+[Was im Kopf bleibt · Bodo Wartke](https://patrickfischerksa.github.io/clara-lyrik/bodo/) ist eine eigenständige, miteinander verlinkte Lyrikwerkstatt unter `dist/bodo/`. Schwerpunkt: Gedichtform und Mnemotechnik, mit offiziellen Hörbeispielen, umstellbaren Reimschemata, Sprechpuls, verdecktem Abruf und eigenen Lernversen. Die fünf Fachbereiche sind Biologie, Deutsch, Mathematik, Physik und Geschichte; ein eigenes Thema ist ebenfalls möglich.
+
+Planung und Quellen stehen in [docs/bodo-unterricht.md](docs/bodo-unterricht.md). Entwürfe werden getrennt von der Clara-Lösel-Einheit unter `wartke-form-gedaechtnis-v1` gespeichert. JSON-Sicherung und Import, Textexport und Druckansicht sind eingebaut. YouTube und Vimeo laden erst nach Klick. Die Fachübungen und Verse sind eigene Texte; Originalaufnahmen bleiben beim jeweiligen Anbieter.
+
 ## Starten
 
 ```sh
