@@ -1,4 +1,4 @@
-import {unitRoute} from './studio-core.js?v=2.4.0';
+import {unitRoute} from './studio-core.js?v=2.5.0';
 const unit=document.documentElement.dataset.unit==='wartke'?'wartke':'clara',embedded=new URLSearchParams(location.search).get('integriert')==='1'&&parent!==window;
 const base=new URL(unit==='wartke'?'../':'./',location.href);
 if(!embedded){location.replace(new URL(unitRoute(unit,location.hash),base).href);}

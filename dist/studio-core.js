@@ -1,6 +1,6 @@
-import {exchangeCatalog} from './workshop-exchange.js?v=2.4.0';
-import {validateSave} from './core.js?v=2.4.0';
-import {decodeJournal} from './bodo/core.js?v=2.4.0';
+import {exchangeCatalog} from './workshop-exchange.js?v=2.5.0';
+import {validateSave} from './core.js?v=2.5.0';
+import {decodeJournal} from './bodo/core.js?v=2.5.0';
 export const STUDIO_KEY='lyrik-gemeinsam-v1';
 export function studioRoute(hash){
  const raw=String(hash||'').replace(/^#/,''),[path,query='']=raw.split('?'),parts=path.split('/');

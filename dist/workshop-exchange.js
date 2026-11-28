@@ -1,7 +1,7 @@
-import {validateSave} from './core.js?v=2.4.0';
-import {decodeJournal} from './bodo/core.js?v=2.4.0';
-import {namedGrammar,decodeLibrary,putGrammar} from './library.js?v=2.4.0';
-import {readWordFields,createWordField} from './wordfields.js?v=2.4.0';
+import {validateSave} from './core.js?v=2.5.0';
+import {decodeJournal} from './bodo/core.js?v=2.5.0';
+import {namedGrammar,decodeLibrary,putGrammar} from './library.js?v=2.5.0';
+import {readWordFields,createWordField} from './wordfields.js?v=2.5.0';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let studioReceiver=null;
 if(typeof window!=='undefined')window.addEventListener('message',event=>{if(parent===window||event.source!==parent||event.origin!==location.origin||event.data?.type!=='lyrik:grammar')return;try{if(!studioReceiver?.root.isConnected)throw Error('Öffne zuerst den Regel-Editor.');const grammar=namedGrammar(event.data.grammar),result=copyExchangeGrammar(studioReceiver.getLibrary(),grammar);studioReceiver.onGrammar(result,true);studioReceiver.tell('«'+result.entry.name+'» aus der gemeinsamen Sammlung geöffnet.');parent.postMessage({type:'lyrik:grammar-opened'},location.origin);}catch(error){parent.postMessage({type:'lyrik:error',message:error.message},location.origin);}});

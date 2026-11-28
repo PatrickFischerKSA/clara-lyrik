@@ -1,11 +1,11 @@
-import {decodeLibrary} from '../library.js?v=2.4.0';
-import {TOPICS} from './data.js?v=2.4.0';
+import {decodeLibrary} from '../library.js?v=2.5.0';
+import {TOPICS} from './data.js?v=2.5.0';
 export const emptyJournal=()=>({version:1,notes:{},attempts:[],grammars:[]});
 const topicIds=new Set(TOPICS.map(topic=>topic.id));
 export function validateJournal(value){
  if(!value||value.version!==1||!value.notes||typeof value.notes!=='object'||Array.isArray(value.notes)||!Array.isArray(value.attempts)||value.attempts.length>40)return false;
  try{decodeLibrary(JSON.stringify(value.grammars??[]));}catch{return false;}
- if(Object.keys(value.notes).length>400||!Object.entries(value.notes).every(([key,v])=>/^[a-z0-9-]{1,80}$/.test(key)&&typeof v==='string'&&v.length<=30000))return false;
+ if(Object.keys(value.notes).length>400||!Object.entries(value.notes).every(([key,v])=>/^[a-z0-9-]{1,80}$/.test(key)&&typeof v==='string'&&v.length<=(key==='draft-metre-v1'?190000:30000)))return false;
  return value.attempts.every(a=>a&&topicIds.has(a.topic)&&['facts','verse'].includes(a.mode)&&typeof a.date==='string'&&a.date.length<80&&Number.isFinite(Date.parse(a.date))&&Array.isArray(a.answers)&&a.answers.length===4&&a.answers.every(v=>typeof v==='string'&&v.length<=5000)&&Array.isArray(a.checks)&&a.checks.length===4&&a.checks.every(v=>typeof v==='boolean'))&&JSON.stringify(value).length<=1000000;
 }
 export function decodeJournal(raw){

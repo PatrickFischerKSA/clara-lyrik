@@ -1,4 +1,4 @@
-import {createWordField} from '../wordfields.js?v=2.4.0';
+import {createWordField} from '../wordfields.js?v=2.5.0';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 export function collectNoteEntries(collection,notes){

@@ -1,5 +1,5 @@
-import {studioRoute,unitRoute,sharedCollection,STUDIO_KEY,validateStudioNotes,decodeStudioBackup} from './studio-core.js?v=2.4.0';
-import {namedGrammar} from './library.js?v=2.4.0';
+import {studioRoute,unitRoute,sharedCollection,STUDIO_KEY,validateStudioNotes,decodeStudioBackup} from './studio-core.js?v=2.5.0';
+import {namedGrammar} from './library.js?v=2.5.0';
 const $=s=>document.querySelector(s),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let notes={},pending=null,currentUnit=null,filter='',collection=[],lastRoute='',lastWriter='clara',requestedScroll=null,loadingFrame=false;
 try{const old=JSON.parse(localStorage.getItem(STUDIO_KEY)||'{}');if(validateStudioNotes(old))notes=old;}catch{}

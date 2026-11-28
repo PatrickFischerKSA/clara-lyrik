@@ -177,3 +177,11 @@ Quellen: [Wartkes Textquelle](https://www.bodowartke.de/tonguetwisters), [Gesang
 ## Redaktion der Begleittexte
 
 Einleitungen, Ressourcenbeschreibungen, Editorhilfen, Rückmeldungen und Quellenfenster sind gekürzt. Originaltexte, die 15 Videobeispiele, Schreibvorschläge, Wortfelder und Grammatikregeln bleiben erhalten. Speicher-, Lösch- und Importhinweise benennen weiterhin die jeweilige Wirkung einer Aktion.
+
+## Eigene Verse metrisch untersuchen
+
+In beiden Schreibwerkstätten steht die metrische Analyse direkt unter dem Entwurf. In der Wartke-Werkstatt können zusätzlich die vier aktuellen Lernverse nach Fach übernommen werden. Die Aufteilung in Silben wird lokal vorgeschlagen; sie ist eine einfache Heuristik und kein Aussprachewörterbuch. Mittelpunkte lassen sich im Trennungsfeld ergänzen oder entfernen. Wortlaut und Zeilenumbrüche werden dabei geprüft, damit die Analyse den Entwurf nicht verändert.
+
+Jede Silbe beginnt ohne festgelegte Betonung. Klicks markieren Hebungen und Senkungen; Zwischenräume setzen Pausen. Erst nach vollständiger Markierung einer Zeile zeigt die Analyse Auftakt, Kadenz und eine mögliche Übereinstimmung mit einem regelmässigen Versmass. Die Klickwiedergabe folgt den selbst gesetzten Akzenten und Pausen, nicht einer automatisch erkannten Aussprache. Mehrere Verse lassen sich nach Silbenzahl, Hebungszahl und Senkungsabständen vergleichen.
+
+Trennung und Markierungen werden im vorhandenen Journal gespeichert und gesichert. Beim Aktualisieren bleiben korrigierte Trennungen und Markierungen unveränderter Verse erhalten. Veränderte Verse beginnen mit offenen Betonungen. Die Analyse überschreibt keine Entwürfe. Grenzen: 12 000 Zeichen, 60 Verse und 96 Silben pro Vers; längere Texte werden mit einer Meldung abgewiesen und nicht abgeschnitten.

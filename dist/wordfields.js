@@ -1,5 +1,5 @@
 // Literal word fields for the form editor. Complex rules stay untouched.
-import {compileGrammar} from './grammar.js?v=2.4.0';
+import {compileGrammar} from './grammar.js?v=2.5.0';
 function commentOf(line){
  let quote='',escaped=false;
  for(let i=0;i<line.length;i++){

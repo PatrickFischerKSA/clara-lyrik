@@ -1,4 +1,4 @@
-import {METRE_CASES,metreCase,caseSyllables,scanPattern,decodeScansion,toggleStress} from './metre.js?v=2.4.0';
+import {METRE_CASES,metreCase,caseSyllables,scanPattern,decodeScansion,toggleStress} from './metre.js?v=2.5.0';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const metreHTML=()=>'<section id="metre-analysis" class="metre-analysis" aria-label="Metrische Analyse"></section>';
 export function mountMetre(root,{note,setNote,onTempo}){
