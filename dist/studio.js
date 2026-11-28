@@ -1,4 +1,4 @@
-import {studioRoute,unitRoute,sharedCollection,STUDIO_KEY,validateStudioNotes,decodeStudioBackup} from './studio-core.js?v=2.0.0';
+import {studioRoute,unitRoute,sharedCollection,STUDIO_KEY,validateStudioNotes,decodeStudioBackup} from './studio-core.js?v=2.1.0';
 import {namedGrammar} from './library.js?v=1.5.2';
 const $=s=>document.querySelector(s),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let notes={},pending=null,currentUnit=null,filter='',collection=[],lastRoute='',lastWriter='clara',requestedScroll=null,loadingFrame=false;

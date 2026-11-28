@@ -1,5 +1,5 @@
-import {MEDIA,TOPICS} from './data.js?v=1.2.0';
-import {LEARNING_GRAMMARS} from './grammar-examples.js?v=1.2.0';
+import {MEDIA,TOPICS} from './data.js?v=2.1.0';
+import {LEARNING_GRAMMARS} from './grammar-examples.js?v=2.1.0';
 import {learningDrafts,fourVerseLines} from './grammar-tools.js?v=1.1.0';
 
 export function workshopRoute(hash){

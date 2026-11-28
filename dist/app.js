@@ -1,4 +1,4 @@
-import {exchangeHTML,mountWorkshopExchange} from './workshop-exchange.js?v=2.0.0';
+import {exchangeHTML,mountWorkshopExchange} from './workshop-exchange.js?v=2.1.0';
 import {READALONG_TEXTS} from './readalong-texts.js?v=1.9.0';
 import {mountReadAlong} from './readalong-ui.js?v=1.9.0';
 import {readWordFields,updateWordField,createWordField,renameWordField,deleteWordField,wordFieldUsage} from './wordfields.js?v=1.7.2';

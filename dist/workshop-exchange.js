@@ -1,5 +1,5 @@
-import {validateSave} from './core.js?v=1.5.2';
-import {decodeJournal} from './bodo/core.js?v=1.1.0';
+import {validateSave} from './core.js?v=2.1.0';
+import {decodeJournal} from './bodo/core.js?v=2.1.0';
 import {namedGrammar,decodeLibrary,putGrammar} from './library.js?v=1.5.2';
 import {readWordFields,createWordField} from './wordfields.js?v=1.7.2';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

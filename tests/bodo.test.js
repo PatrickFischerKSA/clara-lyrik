@@ -7,7 +7,7 @@ test('Wartke sources, official players and cross-subject exercises stay connecte
  const ids=new Set(SOURCES.map(s=>s.id));
  assert.equal(ids.size,SOURCES.length);
  for(const s of [...SOURCES,...MEDIA])assert.equal(new URL(s.url).protocol,'https:');
- assert.equal(new Set(MEDIA.map(m=>m.id)).size,4);
+ assert.equal(new Set(MEDIA.map(m=>m.id)).size,MEDIA.length);
  for(const m of MEDIA){assert.ok(TOPICS.some(t=>t.id===m.transfer));assert.match(m.video,m.kind==='youtube'?/^[\w-]{11}$/:/^\d+$/);}
  assert.ok(TOPICS.filter(t=>t.subject!=='Biologie').length>=3);
  for(const t of TOPICS){assert.ok(ids.has(t.source));for(const key of ['facts','verse','questions','answers'])assert.equal(t[key].length,4);}

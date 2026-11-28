@@ -4,11 +4,15 @@ Eine gemeinsame interaktive Lyrikwerkstatt für Sekundarstufe II. [Online öffne
 
 ## Ein gemeinsamer Einstieg
 
-Die Startseite führt zu beiden Künstlern, einem interaktiven Zeilenversuch, beiden Schreibweisen und einer gemeinsamen Sammlung. Originalporträt und offizielle Videovorschaubilder zeigen die Personen. Wartkes Einstieg beginnt mit «Barbaras Rhabarberbar», drei weiteren Originalvideos und einem Wortspiel: einen Begriff eingeben, als Figur auftreten lassen, eine Wendung versuchen, die eigene Zeile bearbeiten und in die Werkstatt mitnehmen. Fachformulare sind dort erst auf Wunsch sichtbar. Die Originalplayer laden nach Klick; externe Vorschaubilder werden schon bei der Ansicht vom Anbieter abgerufen.
+Die Startseite führt zu beiden Künstlern, einem interaktiven Zeilenversuch, beiden Schreibweisen und einer gemeinsamen Sammlung. Originalporträt und offizielle Videovorschaubilder zeigen die Personen. Wartkes Einstieg beginnt mit «Barbaras Rhabarberbar», sechs weiteren Originalvideos und einem Wortspiel: einen Begriff eingeben, als Figur auftreten lassen, eine Wendung versuchen, die eigene Zeile bearbeiten und in die Werkstatt mitnehmen. Fachformulare sind dort erst auf Wunsch sichtbar. Die Originalplayer laden nach Klick; externe Vorschaubilder werden schon bei der Ansicht vom Anbieter abgerufen.
 
 Lösel: Original-Reels, Schreibimpulse, Textbeobachtung, Rhythmusspiel und Gedichtwerkstatt. Wartke: Originalvideos, Gedichtform, Sprechpuls, aktives Abrufen und Lernverse in Biologie, Deutsch, Mathematik, Physik und Geschichte. Die Werkstätten behalten ihre vollständigen D-Gram-Editoren und bisherigen Entwürfe. Das Wortspiel kann eine eigene erste Zeile als Wortfeld ergänzen, ohne bisherige Regeln zu ersetzen.
 
 Routen: `#clara/inspiration`, `#wartke/start`, `#schreiben/clara`, `#schreiben/wartke`, `#sammlung` und `#vergleich`. Alte Clara-Links und `/bodo/`-Links werden in die gemeinsame Navigation übernommen. Hörbeispiel-Direktlinks behalten ihre Grammatik und getrennten Entwurfskontexte.
+
+## Originaltracks nach Themen
+
+Unter «Tracks & Themen» sind sieben Originale mit Player, Hörnotiz und passender Beispielgrammatik erreichbar: ER, Mitochondrien, Barbaras Rhabarberbar, Dachdecker, Das Grundgesetz, Die heiligen Schriften 2.0 und Hambacher Wald. Themenfilter besitzen teilbare Direktlinks, etwa `#wartke/hoeren?thema=politik`. Das Grundgesetz ist ein Rap zum deutschen Grundgesetz; die Schweizer Verfassungsdaten, Mathematik und Physik sind separate eigene Schreibübungen ohne hinterlegte Wartke-Tracks. Religionskritik und Protest werden als künstlerische Positionen, nicht als neutrale Sachlektionen bearbeitet.
 
 ## Gemeinsame Sammlung und Sicherung
 

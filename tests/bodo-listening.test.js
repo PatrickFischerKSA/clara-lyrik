@@ -35,3 +35,17 @@ test('Hearing drafts have separate storage contexts and matching facts, sources 
  assert.match(listeningWorkshop('dach').topic.facts.join(' '),/Alliteration/);
  assert.ok(TOPICS.find(t=>t.id==='bio').facts.some(f=>f.includes('Golgi')));
 });
+
+test('Non-biology originals lead to their own subjects, never the Swiss chronology exercise',()=>{
+ const expected={grundgesetz:'politik',schriften:'ethik',wald:'geografie'};
+ for(const [id,subject] of Object.entries(expected)){
+  const handoff=listeningWorkshop(id);
+  assert.equal(handoff.media.transfer,subject);
+  assert.equal(handoff.example.topic,subject);
+  assert.equal(new URL(handoff.media.official).hostname,'www.bodowartke.de');
+  assert.ok(handoff.media.category);
+  assert.notDeepEqual(handoff.topic.facts,TOPICS.find(t=>t.id==='history').facts);
+ }
+ assert.ok(!MEDIA.some(m=>['math','physics','history'].includes(m.transfer)));
+ assert.match(listeningWorkshop('grundgesetz').media.description,/Deutschland.*Schweizer/);
+});

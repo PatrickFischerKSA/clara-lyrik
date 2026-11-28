@@ -26,3 +26,12 @@ test('A full journal backup preserves both legacy journals and common notes exac
  for(const value of [{...backup,version:2},{...backup,notes:[]},{...backup,clara:'{}'},{...backup,wartke:'{}'}])assert.throws(()=>decodeStudioBackup(JSON.stringify(value)));
  assert.equal(validateStudioNotes({start:42}),false);assert.equal(validateStudioNotes(JSON.parse('{"__proto__":"bad"}')),false);
 });
+
+test('New track subjects survive recall history and combined backup without losing older work',()=>{
+ const journal=emptyJournal();journal.notes['ws-history-line-0']='Meine Schweizer Geschichte';
+ for(const topic of ['politik','ethik','geografie'])journal.attempts.push({topic,mode:'facts',date:'2026-11-28T12:00:00Z',answers:['a','b','c','d'],checks:[true,false,true,false]});
+ const backup={format:'lyrik-gemeinsam',version:1,notes:{},clara:null,wartke:JSON.stringify(journal)};
+ assert.deepEqual(decodeStudioBackup(JSON.stringify(backup)),backup);
+ assert.deepEqual(studioRoute('#wartke/hoeren?thema=politik'),{page:'unit',unit:'wartke',hash:'#hoeren?thema=politik'});
+ assert.equal(unitRoute('wartke','#hoeren?thema=ethik'),'#wartke/hoeren?thema=ethik');
+});

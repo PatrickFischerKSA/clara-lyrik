@@ -94,3 +94,14 @@ Notizen und Versuche werden lokal unter `wartke-form-gedaechtnis-v1` gespeichert
 ## Direktübernahme aus der Lösel-Werkstatt
 
 Im Regel-Editor können mehrere eigene Lösel-Entwürfe und gespeicherte Grammatiken gemeinsam als lokale Kopien übernommen werden. Eine davon kann auf Wunsch sofort im Editor geöffnet werden. Auch mehrere ausgewählte Wortfelder lassen sich gemeinsam übernehmen. Die Auswahl erfolgt über Kontrollkästchen mit Vorschau und eigenem Namen je Feld. Die Gegenrichtung ist ebenfalls verfügbar. Quellen und Vorschau sind vor der Übernahme sichtbar; eigene Namen und Regeln werden bei Konflikten geschützt. Die Bedienung und Speichergrenzen beschreibt [werkstatt-austausch.md](werkstatt-austausch.md).
+
+
+## Weitere Originaltracks: Geschichte, Politik, Religion und Umwelt
+
+«Tracks & Themen» enthält zusätzlich drei überprüfte Originale mit Themenfiltern und eigenen Werkstattübergängen:
+
+- **Das Grundgesetz** (2019), Bodo Wartke & Die SchönenGutenA-Band: Rap zu den ersten fünf Artikeln des deutschen Grundgesetzes. Abgleich mit dem Originalgesetz, Artikelfolge als Erinnerungsgerüst. Eigene Grammatik zu Würde, Gleichheit, Freiheit und Schranken. Kein Track über die Schweizer Verfassungsdaten. [Original](https://vimeo.com/337726716), [Kontext](https://www.bodowartke.de/presse_dasgrundgesetz).
+- **Die heiligen Schriften 2.0** (2020): Künstlerische Kritik am fanatisch motivierten Missbrauch religiöser Texte. Sprecherposition, Auslegung und pauschale Zuschreibung unterscheiden. Eigene Grammatik zu Beobachtung, Unterscheidung, Frage und Prüfung. [Original](https://www.youtube.com/watch?v=88eVuCRlnuA), [Kontext](https://www.bodowartke.de/presse_heiligeschriften).
+- **Hambacher Wald** (2018): Protestlied nach einem Besuch im Hambacher Forst. Beschreibung, Wertung und Anliegen unterscheiden; den Entstehungskontext beachten. Eigene Grammatik zu Ort, Bild, Frage und begründeter Forderung. [Original](https://www.youtube.com/watch?v=tTKcnlp0x_Y), [Kontext](https://www.bodowartke.de/presse_hambacher_wald).
+
+Die drei Lieder werden nicht pauschal als Lehrgedichte oder als Beleg für die Wirksamkeit von Mnemotechniken bezeichnet. Der Schwerpunkt liegt auf Form, Erinnerung und kritischem Verstehen. Mathematik, Physik und die Schweizer Verfassungsdaten bleiben eigene Schreibübungen; es sind dafür keine Wartke-Originaltracks hinterlegt.

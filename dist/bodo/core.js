@@ -1,5 +1,5 @@
 import {decodeLibrary} from '../library.js?v=1.5.2';
-import {TOPICS} from './data.js?v=1.0.0';
+import {TOPICS} from './data.js?v=2.1.0';
 export const emptyJournal=()=>({version:1,notes:{},attempts:[],grammars:[]});
 const topicIds=new Set(TOPICS.map(topic=>topic.id));
 export function validateJournal(value){

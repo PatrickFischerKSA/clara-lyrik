@@ -1,11 +1,11 @@
-import {exchangeHTML,mountWorkshopExchange} from '../workshop-exchange.js?v=2.0.0';
+import {exchangeHTML,mountWorkshopExchange} from '../workshop-exchange.js?v=2.1.0';
 import {mountHearingNotes,wordFieldFromNotes} from './hearing-notes.js?v=1.3.0';
 import {compileGrammar} from '../grammar.js?v=1.5.2';
 import {readWordFields,updateWordField,createWordField,renameWordField,deleteWordField,wordFieldUsage} from '../wordfields.js?v=1.7.2';
 import {namedGrammar,putGrammar,importGrammar,exportGrammar,unusedImportName} from '../library.js?v=1.5.2';
-import {LEARNING_GRAMMARS,exampleForTopic} from './grammar-examples.js?v=1.2.0';
+import {LEARNING_GRAMMARS,exampleForTopic} from './grammar-examples.js?v=2.1.0';
 import {learningDrafts,fourVerseLines} from './grammar-tools.js?v=1.1.0';
-import {TOPICS,SOURCES} from './data.js?v=1.2.0';
+import {TOPICS,SOURCES} from './data.js?v=2.1.0';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const grammarEditorHTML=()=>'<section id="dgram-editor" class="panel section-gap" aria-labelledby="dgram-title"></section>';
 
