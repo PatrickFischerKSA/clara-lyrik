@@ -1,0 +1,35 @@
+// Original learning exercises. These are not Bodo Wartke lyrics.
+const stanza = 'S -> V1 "\\n" V2 "\\n" V3 "\\n" V4\n';
+export const LEARNING_GRAMMARS = [
+ {id:'bio-anapher',topic:'bio',name:'Biologie · ER und Golgi',form:'Anapher · freie Sprechverse',source:'bio',
+ task:'Verändere eine Formulierung im Wortfeld, ohne die Aufgabe des Zellbestandteils zu verändern. Erkläre nach dem Vortragen den Unterschied zwischen rauem ER, glattem ER und Golgi-Apparat ohne Vorlage.',
+ hint:'Der wiederholte Auftakt ordnet vier Aussagen. Nicht alle Proteine entstehen am rauen ER. Die Wortfelder enthalten bewusst zusammenhängende Aussagen, damit Fachwort und Aufgabe verbunden bleiben.',
+ rules:stanza+'V1 -> "Ich merke mir:" Rau\nV2 -> "Ich merke mir:" Protein\nV3 -> "Ich merke mir:" Glatt\nV4 -> "Ich merke mir:" Golgi',
+ words:'Rau -> "Am rauen ER sitzen Ribosomen." | "Ribosomen sitzen an der Oberfläche des rauen ER."\nProtein -> "Am rauen ER entstehen bestimmte Proteine." | "Bestimmte Proteine werden am rauen ER hergestellt und weiterbearbeitet."\nGlatt -> "Das glatte ER ist an der Lipidsynthese beteiligt." | "Am glatten ER werden unter anderem Lipide gebildet."\nGolgi -> "Der Golgi-Apparat verändert, sortiert und verpackt Stoffe für den Weitertransport." | "Stoffe werden im Golgi-Apparat verändert, sortiert und für den Weitertransport verpackt."'},
+ {id:'deutsch-kasus',topic:'deutsch',name:'Deutsch · Vier Kasus',form:'Paarreim · aabb',source:'grammar',
+ task:'Probiere andere Ortsangaben und Futtersorten aus. Behalte der, des, dem und den beim maskulinen Nomen im Singular bei. Begründe an jeder Zeile den Kasus und prüfe die Endklänge beim Sprechen.',
+ hint:'Die Reimwörter bleiben aufeinander abgestimmt: hier/dir und mir, allein und herein/hinein. Neue Wortfeld-Einträge können den Reim verändern. Die Artikelfolge gilt nicht für alle Nominalgruppen.',
+ rules:stanza+'V1 -> "Nominativ: Der Hund steht" Ort "."\nV2 -> "Genitiv: Des Hundes Halsband liegt bei mir."\nV3 -> "Dativ: Dem Hund gebe ich" Futter "allein."\nV4 -> "Akkusativ: Den Hund lasse ich" Richtung "."',
+ words:'Ort -> "hier" | "bei dir"\nFutter -> "Futter" | "Wasser"\nRichtung -> "herein" | "hinein"'},
+ {id:'math-prozent',topic:'math',name:'Mathematik · Prozent verstehen',form:'Paarreim · aabb',source:'math',
+ task:'Verändere die Wendungen, behalte die vier Zahlenbeziehungen bei. Rechne anschliessend ohne Gedicht: Wie viel sind 25 Prozent von 80? Prüfe, ob der Text beim Rechnen hilft oder nur die Begriffe wachruft.',
+ hint:'Die Fachangaben stehen in den Regeln, die veränderlichen Merkwendungen in den Wortfeldern. Die Reimfamilien mir/hier/wir und zwei/nebenbei/frei ergeben Paarreime. Ein Reim prüft keine Rechnung.',
+ rules:stanza+'V1 -> "Prozent bedeutet pro hundert – das" MerksatzA "."\nV2 -> "Ein Ganzes sind hundert Prozent; das" MerksatzB "."\nV3 -> "Fünfzig Prozent sind die Hälfte: Ein Ganzes teile ich durch zwei."\nV4 -> "Ein Viertel sind fünfundzwanzig Prozent –" Schluss "."',
+ words:'MerksatzA -> "merke ich mir" | "notiere ich hier"\nMerksatzB -> "merken wir" | "notieren wir"\nSchluss -> "das merke ich mir nebenbei" | "dafür ist ein Platz noch frei"'},
+ {id:'physics-weg-zeit',topic:'physics',name:'Physik · Weg und Zeit',form:'Vier Sinneinheiten · freie Sprechverse',source:'physics',
+ task:'Sprich nach jeder Zeile eine deutliche Pause. Ergänze danach eigene gemessene Werte und rechne die mittlere Bahngeschwindigkeit aus. Welche Einheit entsteht aus Metern geteilt durch Sekunden?',
+ hint:'Die mittlere Bahngeschwindigkeit verwendet die gesamte Wegstrecke und die gesamte Zeit. Das Beispiel behandelt weder momentane Geschwindigkeit noch gerichtete Verschiebung. Notierte und gemessene Grössen sind im Sachzusammenhang zu prüfen.',
+ rules:stanza+'V1 -> "Die gesamte Wegstrecke:" Strecke "."\nV2 -> "Die gesamte Zeit:" Dauer "."\nV3 -> "Mittlere Bahngeschwindigkeit: gesamte Wegstrecke geteilt durch gesamte Zeit."\nV4 -> "Meter geteilt durch Sekunden:" Einheit "."',
+ words:'Strecke -> "in Metern gemessen" | "in Metern notiert"\nDauer -> "in Sekunden gemessen" | "in Sekunden notiert"\nEinheit -> "Meter pro Sekunde" | "m/s, also Meter pro Sekunde"'},
+ {id:'history-verfassung',topic:'history',name:'Geschichte · Vier Verfassungsdaten',form:'Chronologische Folge · freie Sprechverse',source:'history',
+ task:'Gib jeder Jahreszahl beim Vortragen einen hörbaren Auftakt. Formuliere eine Aussage im Wortfeld um. Verdecke danach den Text und unterscheide Annahme und Inkrafttreten der neuen Verfassung.',
+ hint:'Die Jahreszahlen bleiben mit ihren Ereignissen verbunden. Eine erinnerte Jahresfolge erklärt noch keine Ursachen und Folgen. Prüfe diese an einer zusätzlichen Fachquelle.',
+ rules:stanza+'V1 -> "1848:" Gruendung "."\nV2 -> "1874:" Revision "."\nV3 -> "1999:" Annahme "."\nV4 -> "2000:" Inkrafttreten "."',
+ words:'Gruendung -> "Der Schweizer Bundesstaat entsteht" | "Die Bundesverfassung begründet den Schweizer Bundesstaat"\nRevision -> "Die erste Totalrevision der Bundesverfassung erfolgt" | "Die Bundesverfassung wird erstmals total revidiert"\nAnnahme -> "Die neue Bundesverfassung wird in der Volksabstimmung angenommen" | "Das Volk nimmt die neue Bundesverfassung an"\nInkrafttreten -> "Die neue Bundesverfassung tritt in Kraft" | "Die 1999 angenommene Bundesverfassung tritt in Kraft"'},
+ {id:'eigen-vier-fakten',topic:'eigen',name:'Ein eigenes Fachthema',form:'Vier Aussagen · Form frei wählen',
+ task:'Ersetze die vier Platzhalter durch überprüfte Aussagen aus deinem Fach. Sammle für jeden Fakt zwei gleichbedeutende Formulierungen. Ergänze dann Reim, wiederholte Anfänge oder eine Bildfolge und prüfe jede Variante.',
+ hint:'Die Platzhalter sind Arbeitsaufträge, keine Fachangaben. Trage die Quelle bei deinen vier Ausgangsaussagen in der Schreibwerkstatt ein. Führe verwandte Formulierungen im selben Wortfeld zusammen.',
+ rules:stanza+'V1 -> FaktEins\nV2 -> FaktZwei\nV3 -> FaktDrei\nV4 -> FaktVier',
+ words:'FaktEins -> "Hier steht mein erster überprüfter Fakt."\nFaktZwei -> "Hier steht mein zweiter überprüfter Fakt."\nFaktDrei -> "Hier steht mein dritter überprüfter Fakt."\nFaktVier -> "Hier steht mein vierter überprüfter Fakt."'}
+];
+export const exampleForTopic = topic => LEARNING_GRAMMARS.find(e=>e.topic===topic)||LEARNING_GRAMMARS.at(-1);

@@ -20,6 +20,18 @@ Wartkes Originalbeiträge zum endoplasmatischen Retikulum und zu Mitochondrien b
 
 Die nächste Lektion beginnt mit einem erneuten Abruf und einer neuen Anwendungsaufgabe. Für einen einfachen Einstieg genügen zwei Fakten und freie Sprechverse. Eine Erweiterung untersucht mehrsilbige Reime, eine andere Gedächtnishilfe oder zusätzliche Fachquellen. Tempo ist kein Bewertungskriterium.
 
+## D-Gram-Regel-Editor in der Schreibwerkstatt
+
+Über «Zum D-Gram-Regel-Editor» gelangt man innerhalb der Werkstatt zum Editor. Für jedes der fünf Fächer und ein eigenes Thema gibt es eine Beispielgrammatik mit kurzem Arbeitsauftrag, Formhinweis und fachlicher Quelle. Die Auswahl allein verändert keine Regeln. Beim Laden werden vorherige Regeln für eine Wiederherstellung aufgehoben.
+
+Die Beispiele verwenden Anaphern (ER und Golgi), Paarreime (Kasus und Prozentrechnung), Sinneinheiten (Wegstrecke und Zeit) sowie eine chronologische Folge (Bundesverfassungsdaten). Fachlich zusammengehörige Wörter und Aussagen bleiben in passenden Feldern oder festen Regeln verbunden. Die Beispiele zeigen unterschiedliche Möglichkeiten; nicht jede eigene Kombination erhält automatisch Reim, Grammatik oder fachliche Richtigkeit.
+
+Wörter und ganze Wendungen lassen sich ohne Syntax ändern, ergänzen und entfernen. Eigene Wortfelder können angelegt, umbenannt und gelöscht werden. Beim Umbenennen werden Regelverweise angepasst; beim Löschen eines noch verwendeten Feldes ist ein Ersatz nötig. Neue Felder müssen in den Regeln verwendet werden, damit sie in der Ausgabe vorkommen. Komplexe Regeln bleiben in der Textansicht bearbeitbar.
+
+Eine Ableitung macht die gewählten Bausteine sichtbar. Eine Fassung mit genau vier ausgefüllten Zeilen lässt sich nach Bestätigung in die Versfelder des gewählten Faches übernehmen. Dabei werden vorhandene Verse ersetzt und die manuelle fachliche Prüfung zurückgesetzt. Ausgangsaussagen und Quelle bleiben erhalten und müssen mit der erzeugten Fassung verglichen werden. Änderungen an Regeln oder Wortfeldern sperren die Übernahme einer älteren Ausgabe bis zum erneuten Erzeugen.
+
+Der Editorinhalt bleibt für jeden Fachbereich erhalten. Die fachübergreifende eigene Grammatikbibliothek erlaubt benanntes Speichern, Wiederladen und JSON-Import und -Export. Gespeicherte Grammatiken dürfen auch unfertige Syntax enthalten. Das Dateiformat ist mit der Clara-Lösel-Werkstatt kompatibel. Importierte Namen erhalten bei Bedarf einen Zusatz; bestehende Einträge bleiben erhalten. Alle Grammatiken sind Teil des Wartke-Journals; ältere Journal-Sicherungen bleiben ladbar.
+
 ## Fachliche und didaktische Grenzen
 
 Der Abrufversuch ist eine Selbsteinschätzung, keine automatische Benotung und kein kontrolliertes Experiment. Vorwissen, Übungszeit, Reihenfolge und Textschwierigkeit sind nicht kontrolliert. Aus einem Versuch folgt keine Aussage, ob gereimte Texte allgemein besser lehren. Die Forschung zu aktivem Abrufen begründet die Abrufphase, nicht ein pauschales Versprechen für Rap.
@@ -48,7 +60,7 @@ Recherchestand: 28.11.2026. Die Originale werden über die offiziellen YouTube- 
 
 ## Technik und Daten
 
-Statisches ES-Modul-Projekt ohne Abhängigkeiten oder Backend. `dist/bodo/data.js` enthält Quellen und Übungen, `core.js` die Abruf- und Sicherungslogik und `app.js` die Oberfläche. Alle relativen Pfade funktionieren unter dem GitHub-Pages-Unterpfad. Die erste Ressource verlinkt die zweite im Fussbereich, die zweite verlinkt zurück.
+Statisches ES-Modul-Projekt ohne Abhängigkeiten oder Backend. `dist/bodo/data.js` enthält Quellen und Übungen, `core.js` die Abruf- und Sicherungslogik und `app.js` die Oberfläche. `grammar-examples.js`, `grammar-tools.js` und `grammar-editor.js` ergänzen Fachbeispiele, Ausgabeprüfung und Regeloberfläche. Der Parser und die Wortfeld- und Bibliotheksfunktionen werden mit der ersten Ressource geteilt. Alle relativen Pfade funktionieren unter dem GitHub-Pages-Unterpfad. Die erste Ressource verlinkt die zweite im Fussbereich, die zweite verlinkt zurück.
 
 Notizen und Versuche werden lokal unter `wartke-form-gedaechtnis-v1` gespeichert. Keine Konten, externen Fonts oder eigenen Analysedienste. Externe Player verbinden erst nach Klick mit dem Anbieter. Journal-Sicherung als JSON, validierter Import mit Bestätigung des Ersetzens, eigener Textexport und Druckansicht sind verfügbar. Auf geteilten Geräten bleiben Einträge für andere sichtbar; gelöschte Browserdaten können Einträge verlieren. Sicherungen deshalb selbst aufbewahren.
 
