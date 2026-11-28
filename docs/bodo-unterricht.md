@@ -90,3 +90,7 @@ Statisches ES-Modul-Projekt ohne Abhängigkeiten oder Backend. `dist/bodo/data.j
 Notizen und Versuche werden lokal unter `wartke-form-gedaechtnis-v1` gespeichert. Keine Konten, externen Fonts oder eigenen Analysedienste. Externe Player verbinden erst nach Klick mit dem Anbieter. Journal-Sicherung als JSON, validierter Import mit Bestätigung des Ersetzens, eigener Textexport und Druckansicht sind verfügbar. Auf geteilten Geräten bleiben Einträge für andere sichtbar; gelöschte Browserdaten können Einträge verlieren. Sicherungen deshalb selbst aufbewahren.
 
 `npm run check` und `npm test` prüfen Syntax, Quellenverweise, die Reimschema-Anordnung, Abrufzustände, Fachwortsuche und Sicherungsvalidierung. Die Browserprüfung ergänzt Navigation, Texteingaben, Themenwechsel, Player und mobile Darstellung.
+
+## Direktübernahme aus der Lösel-Werkstatt
+
+Im Regel-Editor können eigene Lösel-Entwürfe, gespeicherte Grammatiken oder einzelne Wortfelder unmittelbar als lokale Kopie übernommen werden. Die Gegenrichtung ist ebenfalls verfügbar. Quellen und Vorschau sind vor der Übernahme sichtbar; eigene Namen und Regeln werden bei Konflikten geschützt. Die Bedienung und Speichergrenzen beschreibt [werkstatt-austausch.md](werkstatt-austausch.md).

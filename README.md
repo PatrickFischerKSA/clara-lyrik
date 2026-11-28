@@ -8,6 +8,12 @@ Eine atmosphärische, interaktive Lyrikeinheit zu Clara Lösel für Sekundarstuf
 
 Planung und Quellen stehen in [docs/bodo-unterricht.md](docs/bodo-unterricht.md). Entwürfe werden getrennt von der Clara-Lösel-Einheit unter `wartke-form-gedaechtnis-v1` gespeichert. JSON-Sicherung und Import, Textexport und Druckansicht sind eingebaut. YouTube und Vimeo laden erst nach Klick. Die Fachübungen und Verse sind eigene Texte; Originalaufnahmen bleiben beim jeweiligen Anbieter.
 
+## Direkt zwischen den Werkstätten übernehmen
+
+Beide D-Gram-Editoren lesen eigene Entwürfe, gespeicherte Grammatiken und einzelne Wortfelder aus der jeweils anderen Werkstatt im selben Browser. Eine Vorschau und die Wahl zwischen ganzer Grammatik und Wortfeld erlauben den Austausch ohne Exportdatei. Neue Kopien erhalten bei Namenskonflikten einen Zusatz. Der aktuelle Editor kann beim Laden einer Grammatik wiederhergestellt werden; Gedicht- und Versfelder bleiben erhalten.
+
+Die Direktlinks `#werkstatt?editor=regeln` öffnen den jeweiligen Austauschbereich. [Bedienung und technische Grenzen](docs/werkstatt-austausch.md).
+
 ## Starten
 
 ```sh
