@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {exchangeCatalog,copyExchangeGrammar,copyExchangeWordField} from '../dist/workshop-exchange.js';
+import {exchangeCatalog,copyExchangeGrammar,copyExchangeWordField,copyExchangeWordFields} from '../dist/workshop-exchange.js';
 import {emptyJournal} from '../dist/bodo/core.js';
 import {compileGrammar,generateFromGrammar} from '../dist/grammar.js';
 import {readWordFields} from '../dist/wordfields.js';
@@ -39,4 +39,35 @@ test('An optional four-line rule keeps original rules and avoids start-symbol co
  assert.equal(copied.start,'UebernahmeVerse2');assert.equal(copied.count,1);assert.ok(copied.rules.startsWith(current.rules+'\n'));
  const text=generateFromGrammar(compileGrammar(copied.rules,copied.words,copied.start),1,()=>0).text;
  assert.deepEqual(text.split('\n'),Array(4).fill('im Labor'));assert.equal(current.start,'S');
+});
+
+test('A batch reserves each new name and preserves both original fields and source entries',()=>{
+ const current={...grammar,words:'Bild -> "alt"\nBild_2 -> "auch alt"'};
+ const selection=[{field:{name:'Bild',values:['Licht']},label:'Bild'},{field:{name:'Ort',values:['Labor']},label:'BILD'},{field:{name:'Ton',values:['"laut" | leise','erste\nzweite']},label:'Meine Töne'}];
+ const before=JSON.stringify({current,selection}),result=copyExchangeWordFields(current,selection);
+ assert.deepEqual(result.fieldNames,['Bild_3','BILD_4','Meine_Töne']);
+ assert.equal(result.rules,current.rules);assert.equal(result.start,current.start);assert.equal(result.count,current.count);
+ assert.deepEqual(readWordFields(result.words).slice(-3).map(f=>f.values),selection.map(item=>item.field.values));
+ assert.equal(JSON.stringify({current,selection}),before);
+});
+
+test('A failed field rejects the whole batch without leaving partial changes',()=>{
+ const current={...grammar},before=JSON.stringify(current);
+ assert.throws(()=>copyExchangeWordFields(current,[]),/mindestens/);
+ assert.throws(()=>copyExchangeWordFields(current,[{field:{name:'Gut',values:['gut']}},{field:{name:'Leer',values:['']}}]),/mindestens/);
+ assert.throws(()=>copyExchangeWordFields(current,[{field:{name:'Gut',values:['gut']}},{field:{name:'Gross',values:['x'.repeat(30000)]}}]),/30.000/);
+ assert.throws(()=>copyExchangeWordFields(current,Array(101).fill({field:{name:'Gut',values:['gut']}})),/100/);
+ assert.equal(JSON.stringify(current),before);
+});
+
+test('The optional four-line rule uses every selected field, even when there are more than four',()=>{
+ for(const count of [1,2,3,4,5,8]){
+  const selected=Array.from({length:count},(_,i)=>({field:{name:'Feld'+i,values:['Wort'+i]}}));
+  const current={...grammar,rules:grammar.rules+'\nUebernahmeVerse -> "bleibt"'};
+  const result=copyExchangeWordFields(current,selected,true);
+  assert.equal(result.start,'UebernahmeVerse2');assert.equal(result.count,1);assert.ok(result.rules.startsWith(current.rules+'\n'));
+  const text=generateFromGrammar(compileGrammar(result.rules,result.words,result.start),1,()=>0).text;
+  assert.equal(text.split('\n').length,4);
+  for(let i=0;i<count;i++)assert.ok(text.includes('Wort'+i));
+ }
 });

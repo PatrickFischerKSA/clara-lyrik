@@ -1,4 +1,4 @@
-import {exchangeHTML,mountWorkshopExchange} from '../workshop-exchange.js?v=1.14.0';
+import {exchangeHTML,mountWorkshopExchange} from '../workshop-exchange.js?v=1.15.0';
 import {mountHearingNotes,wordFieldFromNotes} from './hearing-notes.js?v=1.3.0';
 import {compileGrammar} from '../grammar.js?v=1.5.2';
 import {readWordFields,updateWordField,createWordField,renameWordField,deleteWordField,wordFieldUsage} from '../wordfields.js?v=1.7.2';
@@ -57,7 +57,7 @@ export function mountGrammarEditor(root,{topic,context=topic,initialExample,hear
  $('#dg-export').onclick=()=>{try{download('wartke-grammatik.json',exportGrammar(entry()),'application/json');status('Aktuelle Grammatik als Datei gesichert.');}catch(error){status(error.message,true);}};
  $('#dg-import').onchange=async event=>{try{const file=event.target.files[0];if(!file)return;if(file.size>200000)throw Error('Die Grammatikdatei darf höchstens 200 KB gross sein.');const next=importGrammar(await file.text());next.name=unusedImportName(getLibrary(),next.name);setLibrary(putGrammar(getLibrary(),next));put({selected:next.name});refreshLibrary();status(`«${next.name}» zur Sammlung hinzugefügt. Wähle «Gespeicherte Grammatik laden», um sie zu bearbeiten.`);}catch(error){status(error.message,true);}finally{event.target.value='';}};
  refreshLibrary();
- mountWorkshopExchange($('#workshop-exchange'),{workshop:'wartke',getCurrent:()=>{persist();return entry();},getLibrary,onPrepareLeave:persist,onGrammar:(result,open)=>{if(open)snapshot();setLibrary(result.library);put({selected:result.entry.name});refreshLibrary();if(open)apply(result.entry);},onField:result=>{snapshot();apply({rules:result.rules,words:result.words,start:result.start,count:result.count});status(`Wortfeld «${result.fieldName}» übernommen. Erzeuge neue Fassungen.`);}});
+ mountWorkshopExchange($('#workshop-exchange'),{workshop:'wartke',getCurrent:()=>{persist();return entry();},getLibrary,onPrepareLeave:persist,onGrammar:(result,open)=>{if(open)snapshot();setLibrary(result.library);put({selected:result.entry.name});refreshLibrary();if(open)apply(result.entry);},onField:result=>{snapshot();apply({rules:result.rules,words:result.words,start:result.start,count:result.count});status(`${result.fieldNames.length} ${result.fieldNames.length===1?'Wortfeld':'Wortfelder'} übernommen: ${result.fieldNames.join(', ')}. Erzeuge neue Fassungen.`);}});
  let drafts=[];
  try{const parsed=JSON.parse(get('output','[]'));if(Array.isArray(parsed)&&parsed.length<=24&&parsed.every(x=>typeof x==='string'))drafts=parsed;}catch{}
  function drawOutput(){

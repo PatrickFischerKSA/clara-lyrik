@@ -15,11 +15,17 @@ Ist «Kopie gleich im aktuellen Editor öffnen» ausgewählt, erscheint die Kopi
 
 Die Anzahl meint Erzeugungen des Startsymbols. In der Lösel-Werkstatt kann eine Erzeugung eine einzelne Zeile sein; in Wartkes Beispielen ist sie häufig bereits eine vierzeilige Fassung. Diese Einstellung wird beim Kopieren beibehalten. Die Wartke-Übernahme in die vier Versfelder verlangt weiterhin genau vier ausgefüllte Zeilen.
 
-## Ein Wortfeld übernehmen
+## Ein oder mehrere Wortfelder übernehmen
 
-Wähle unter derselben Quellgrammatik ein einzelnes Wortfeld. Seine Wörter und Wendungen erscheinen vor der Übernahme als Vorschau. Der Name kann angepasst werden. Ein gleicher Regel- oder Feldname in der Zielwerkstatt erhält einen Zahlenzusatz, damit vorhandene Regeln und Verweise erhalten bleiben.
+Unter der ausgewählten Quellgrammatik werden einzeln übernehmbare Wortfelder mit Kontrollkästchen angezeigt. Wähle die gewünschten Felder oder verwende «Alle Wortfelder auswählen». «Auswahl aufheben» entfernt die Markierungen. Ein Zähler zeigt den Umfang der Auswahl. Beim Wechsel der Quellgrammatik oder beim Neueinlesen wird die Auswahl zurückgesetzt.
 
-«Wortfeld übernehmen» ergänzt den aktuellen Editor. Das neue Feld lässt sich danach mit den vorhandenen Wortfeld-Eingaben bearbeiten und in Regeln einsetzen. Die optionale neue Startregel erzeugt vier Zeilen mit diesem Feld. Bestehende Regeln bleiben dabei erhalten und die Änderung lässt sich zurücknehmen. Wörter mit Anführungszeichen, Trennzeichen oder eingebetteten Zeilenumbrüchen bleiben wörtlicher Text. Zusammengesetzte oder noch unfertige Wortfeldregeln lassen sich mit der gesamten Grammatik übernehmen.
+Jedes Feld hat eine eigene Vorschau seiner Einträge und einen bearbeitbaren Namen für die Zielwerkstatt. Mit «Ausgewählte Wortfelder übernehmen» werden alle markierten Felder gemeinsam ergänzt. Gleiche Namen erhalten Zusätze; dabei werden vorhandene Regeln sowie die Namen der zuvor übernommenen Felder berücksichtigt. Bestehende Regeln und Verweise bleiben erhalten. Ohne Auswahl ist die Übernahme deaktiviert.
+
+Die gemeinsame Übernahme wird zunächst vollständig geprüft. Wenn beispielsweise der Name eines Feldes ungültig ist oder die Gesamtgrösse überschritten würde, wird keines der Felder eingefügt. Nach erfolgreicher Übernahme nennt die Rückmeldung die ursprünglichen und neuen Feldnamen. Die gesamte Gruppe lässt sich in einem Schritt mit der vorhandenen Wiederherstellung zurücknehmen.
+
+Die optionale neue Startregel verteilt die ausgewählten Felder auf vier Zeilen. Bei weniger als vier Feldern werden sie wiederholt; bei mehr als vier Feldern stehen mehrere Felder in einer Zeile. Alle ausgewählten Felder kommen darin vor. Die erzeugten Texte bleiben Material für die eigene Überarbeitung. Eingebettete Zeilenumbrüche in Einträgen bleiben erhalten und können die sichtbare Zeilenzahl verändern.
+
+Wörter mit Anführungszeichen, Trennzeichen oder eingebetteten Zeilenumbrüchen bleiben wörtlicher Text. Zusammengesetzte oder noch unfertige Wortfeldregeln lassen sich mit der gesamten Grammatik übernehmen. Pro gemeinsamer Übernahme sind höchstens 100 Felder möglich; Regeln und Wortfelder bleiben insgesamt auf 30.000 Zeichen begrenzt.
 
 ## Speicherung und Grenzen
 

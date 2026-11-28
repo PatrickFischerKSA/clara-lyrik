@@ -93,4 +93,4 @@ Notizen und Versuche werden lokal unter `wartke-form-gedaechtnis-v1` gespeichert
 
 ## Direktübernahme aus der Lösel-Werkstatt
 
-Im Regel-Editor können eigene Lösel-Entwürfe, gespeicherte Grammatiken oder einzelne Wortfelder unmittelbar als lokale Kopie übernommen werden. Die Gegenrichtung ist ebenfalls verfügbar. Quellen und Vorschau sind vor der Übernahme sichtbar; eigene Namen und Regeln werden bei Konflikten geschützt. Die Bedienung und Speichergrenzen beschreibt [werkstatt-austausch.md](werkstatt-austausch.md).
+Im Regel-Editor können eigene Lösel-Entwürfe, gespeicherte Grammatiken oder mehrere ausgewählte Wortfelder gemeinsam als lokale Kopie übernommen werden. Die Auswahl erfolgt über Kontrollkästchen mit Vorschau und eigenem Namen je Feld. Die Gegenrichtung ist ebenfalls verfügbar. Quellen und Vorschau sind vor der Übernahme sichtbar; eigene Namen und Regeln werden bei Konflikten geschützt. Die Bedienung und Speichergrenzen beschreibt [werkstatt-austausch.md](werkstatt-austausch.md).
