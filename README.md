@@ -164,3 +164,16 @@ Unter zwei sicher zugeordneten Original-Reels stehen die vollständigen Buchgedi
 
 
 Die Recherche nach ausdrücklich zur Übernahme freigegebenen Text- und Mediendateien ist in [docs/freigabe-recherche.md](docs/freigabe-recherche.md) dokumentiert. Auf den geprüften offiziellen Seiten wurde keine passende Freigabe gefunden. Der Stand ist unter „Quellen & Hinweise“ auch auf GitHub Pages sichtbar.
+
+
+## Metrische Analyse bei Wartke
+
+`#wartke/form` enthält eine editierbare Silbenanalyse: kurze Originalstellen aus dem Dachdecker-Stück und dem Retikulum-Rap sowie eigene Vergleichsverse für Jambus, Trochäus, Daktylus und Anapäst. Silben lassen sich betonen, Pausen setzen und Wortakzente einblenden. Die Anzeige zählt Hebungen, Auftakt und Senkungsabstände und bestimmt den Schluss der markierten Lesart. Die Musterprüfung bezieht sich auf die manuell gesetzte Betonungsfolge.
+
+Die Originalstellen sind als mögliche Textlesarten zum Vergleich mit dem verlinkten Vortrag angelegt. Die vollständige Zeile wird von einem einzelnen Fachbegriff unterschieden. Das Viererschlag-Werkzeug lässt ein einstellbares Tempo bis 200 BPM zu; die Dachdecker-Auswahl startet bei 140 BPM, entsprechend der auf Wartkes Projektseite bezeichneten Gesangsspur. Markierungen und Pausen werden pro Beispiel im Wartke-Journal gespeichert.
+
+Quellen: [Wartkes Textquelle](https://www.bodowartke.de/tonguetwisters), [Gesangsspuren und Tempo](https://www.bodowartke.de/zungenbrecher), [IDS grammis · Wortakzent](https://grammis.ids-mannheim.de/systematische-grammatik/2344), [Duden · endoplasmatisch](https://www.duden.de/rechtschreibung/endoplasmatisch), [Duden · Retikulum](https://www.duden.de/rechtschreibung/Retikulum).
+
+## Redaktion der Begleittexte
+
+Einleitungen, Ressourcenbeschreibungen, Editorhilfen, Rückmeldungen und Quellenfenster sind gekürzt. Originaltexte, die 15 Videobeispiele, Schreibvorschläge, Wortfelder und Grammatikregeln bleiben erhalten. Speicher-, Lösch- und Importhinweise benennen weiterhin die jeweilige Wirkung einer Aktion.

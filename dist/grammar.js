@@ -1,5 +1,5 @@
 // A small context-free grammar engine. Never evaluates input as JavaScript.
-export const DEFAULT_RULES = `# Jede Regel beschreibt einen möglichen Bauplan.
+export const DEFAULT_RULES = `# Regeln verbinden Text und Wortfelder.
 S -> Anrede Ding "." | Ich Bild "." | Wunsch Tun "."
 Anrede -> "du nennst es"
 Ich -> "ich nenne es"
