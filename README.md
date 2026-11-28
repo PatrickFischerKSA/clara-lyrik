@@ -123,3 +123,6 @@ Die responsive Darstellung wurde für Smartphone, Tablet und Desktop überarbeit
 
 
 Unter zwei sicher zugeordneten Original-Reels stehen die vollständigen Buchgedichte zum Mitlesen bereit. Alle Reel-Karten unterstützen lokal ergänzte Texte, eigene Aufnahmen und geprüfte Wort-Zeitmarken. Die Synchronisation läuft am eigenen Player; der Instagram-Embed wird nicht als verfügbare Wiedergabeuhr ausgegeben. Quellen, fehlende Medien und Dateiformat: [docs/mitlesen.md](docs/mitlesen.md).
+
+
+Die Recherche nach ausdrücklich zur Übernahme freigegebenen Text- und Mediendateien ist in [docs/freigabe-recherche.md](docs/freigabe-recherche.md) dokumentiert. Auf den geprüften offiziellen Seiten wurde keine passende Freigabe gefunden. Der Stand ist unter „Quellen & Hinweise“ auch auf GitHub Pages sichtbar.

@@ -47,3 +47,8 @@ Texte und Zeitmarken bleiben im lokalen Journal und können exportiert werden. A
 - 39 Funktionstests einschliesslich Zeitgrenzen, Wortpausen, Vor-/Rücksprung, Unicode, Originaltext-Erhalt, Importfehlern und Export-Rundlauf.
 - Browserprüfung: Buchtextanzeige, lokale Datei- und Zeitmarkenauswahl, laufende Markierung, Zeitsprung auf 54 beziehungsweise 30 Sekunden und Wiederherstellung des passenden aktiven Testworts.
 - Smartphone-Ansicht mit 390 Pixeln: Mitlesetext ohne horizontalen Überlauf.
+
+
+## Recherche nach ausdrücklichen Freigaben
+
+Am 28.11.2026 wurden die offizielle Website, ihre veröffentlichten Unterseiten, Medienverweise und verlinkten Buchangebote geprüft. Es wurde keine passende ausdrückliche Übernahmefreigabe für die benötigten Gedichtaufnahmen oder weiteren Volltexte gefunden. Die Ergebnisse und ausgeschlossenen Kandidaten stehen in [freigabe-recherche.md](freigabe-recherche.md). Die Synchronisation der Original-Reels ist deshalb weiterhin nicht vollständig eingerichtet.
