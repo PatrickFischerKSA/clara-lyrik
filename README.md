@@ -16,6 +16,12 @@ Die Oberfläche verwendet kurze Sachbezeichnungen statt Werbesprüchen. Beide Sc
 
 Das frühere Wartke-Wortspiel wurde entfernt. Nur exakt unveränderte, automatisch erzeugte Vorschläge werden unter «Vorschlag aus der früheren Version» aufbewahrt; eigene und bearbeitete Texte bleiben im Schreibfeld. Eine Sicherung enthält auch die aufbewahrten Vorschläge. `writing-draft.js` prüft die Übernahme ohne Textverlust.
 
+## Videos und Beispiele direkt am Entwurf
+
+Beide Entwurfsansichten enthalten einen auswählbaren Originalbeitrag, ein neues vierzeiliges Beispiel, eine konkrete Anschlussidee und sammelbare Wörter. `dist/writing-inspiration.js` enthält sieben Wartke- und acht Lösel-Bezüge. Die eigenen Beispiele sind ausdrücklich als solche bezeichnet; sie sind keine Transkripte oder Originaltexte. Der Player lädt nach Klick direkt in der Werkstatt.
+
+Einfügen hängt das Beispiel an den vorhandenen Entwurf an; mehrfaches Einfügen desselben Beispiels erzeugt keine Duplikate. Wortschaltflächen und «Alle Wörter sammeln» ergänzen die bestehenden Notizen. Quellenwechsel erhalten Text und Notizen. Wartkes Auswahl führt zum eigenen Hörbeispiel-Kontext mit der passenden Grammatik. Bei Lösel lädt die ausdrückliche Editoraktion das zugeordnete Beispiel und bewahrt den bisherigen Regelstand für die Wiederherstellung. Direktlinks: `#schreiben/wartke?hoerbeispiel=barbara` und `#schreiben/clara?reel=DaUTcv1NQOr`.
+
 ## Originaltracks nach Themen
 
 Unter «Tracks & Themen» sind sieben Originale mit Player, Hörnotiz und passender Beispielgrammatik erreichbar: ER, Mitochondrien, Barbaras Rhabarberbar, Dachdecker, Das Grundgesetz, Die heiligen Schriften 2.0 und Hambacher Wald. Themenfilter besitzen teilbare Direktlinks, etwa `#wartke/hoeren?thema=politik`. Das Grundgesetz ist ein Rap zum deutschen Grundgesetz; die Schweizer Verfassungsdaten, Mathematik und Physik sind separate eigene Schreibübungen ohne hinterlegte Wartke-Tracks. Religionskritik und Protest werden als künstlerische Positionen, nicht als neutrale Sachlektionen bearbeitet.
