@@ -1,4 +1,4 @@
-import {exchangeHTML,mountWorkshopExchange} from './workshop-exchange.js?v=1.16.0';
+import {exchangeHTML,mountWorkshopExchange} from './workshop-exchange.js?v=2.0.0';
 import {READALONG_TEXTS} from './readalong-texts.js?v=1.9.0';
 import {mountReadAlong} from './readalong-ui.js?v=1.9.0';
 import {readWordFields,updateWordField,createWordField,renameWordField,deleteWordField,wordFieldUsage} from './wordfields.js?v=1.7.2';
@@ -213,3 +213,5 @@ function bindWordFieldEditor(persistEditor,status){
  source.addEventListener('input',()=>{renderFields();tell('Eingabefelder aus der Textansicht aktualisiert.');});
  renderFields();
 }
+
+window.addEventListener('studio:prompt',event=>{if(state.notes['inspiration-impuls'])state.notes['previous-inspiration-impuls']=state.notes['inspiration-impuls'];state.notes['inspiration-impuls']=event.detail;save();render();});

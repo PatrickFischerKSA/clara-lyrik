@@ -1,12 +1,22 @@
-# Zwischen den Zeilen
+# Zwischen den Zeilen · Clara Lösel & Bodo Wartke
 
-Eine atmosphärische, interaktive Lyrikeinheit zu Clara Lösel für Sekundarstufe II (ab 16 Jahren), 90–105 Minuten. Deutschsprachig, ohne Installationsschritt oder Backend. Auf GitHub Pages auch unter einem Repository-Unterpfad lauffähig.
+Eine gemeinsame interaktive Lyrikwerkstatt für Sekundarstufe II. [Online öffnen](https://patrickfischerksa.github.io/clara-lyrik/). Statische Website ohne Backend, Installation oder Konto.
 
-## Zweite Ressource: Bodo Wartke
+## Ein gemeinsamer Einstieg
 
-[Was im Kopf bleibt · Bodo Wartke](https://patrickfischerksa.github.io/clara-lyrik/bodo/) ist eine eigenständige, miteinander verlinkte Lyrikwerkstatt unter `dist/bodo/`. Schwerpunkt: Gedichtform und Mnemotechnik, mit offiziellen Hörbeispielen, umstellbaren Reimschemata, Sprechpuls, verdecktem Abruf und eigenen Lernversen. Die fünf Fachbereiche sind Biologie, Deutsch, Mathematik, Physik und Geschichte; ein eigenes Thema ist ebenfalls möglich. In der Schreibwerkstatt enthält der D-Gram-Regel-Editor neun Beispielgrammatiken mit Arbeitsaufträgen, bearbeitbare Wortfelder und eine eigene Grammatikbibliothek. Ganze Fassungen lassen sich nach Prüfung in die vier Versfelder übernehmen. Die Grammatiken nutzen dasselbe Dateiformat wie die Clara-Lösel-Werkstatt. Jedes der vier Hörbeispiele führt mit einem eigenen Schreibimpuls direkt zur passenden Grammatik. Diese Einstiege haben getrennte Entwürfe und teilbare Direktlinks; eigene Änderungen bleiben beim Wiederkommen erhalten. Die Hörnotiz ist im Editor direkt bearbeitbar und mit der Notiz beim Hörbeispiel identisch. Aus einer ausgewählten Sammlung lassen sich ein benanntes Wortfeld und vier neue Versanfänge anlegen, ohne alte Regeln zu ersetzen. Eine dauerhaft sichtbare Leiste verlinkt beide Schreibwerkstätten direkt.
+Die Startseite führt zu beiden Künstlern, einem interaktiven Zeilenversuch, beiden Schreibweisen und einer gemeinsamen Sammlung. Originalporträt und offizielle Videovorschaubilder zeigen die Personen. Wartkes Einstieg beginnt mit «Barbaras Rhabarberbar», drei weiteren Originalvideos und einem Wortspiel: einen Begriff eingeben, als Figur auftreten lassen, eine Wendung versuchen, die eigene Zeile bearbeiten und in die Werkstatt mitnehmen. Fachformulare sind dort erst auf Wunsch sichtbar. Die Originalplayer laden nach Klick; externe Vorschaubilder werden schon bei der Ansicht vom Anbieter abgerufen.
 
-Planung und Quellen stehen in [docs/bodo-unterricht.md](docs/bodo-unterricht.md). Entwürfe werden getrennt von der Clara-Lösel-Einheit unter `wartke-form-gedaechtnis-v1` gespeichert. JSON-Sicherung und Import, Textexport und Druckansicht sind eingebaut. YouTube und Vimeo laden erst nach Klick. Die Fachübungen und Verse sind eigene Texte; Originalaufnahmen bleiben beim jeweiligen Anbieter.
+Lösel: Original-Reels, Schreibimpulse, Textbeobachtung, Rhythmusspiel und Gedichtwerkstatt. Wartke: Originalvideos, Gedichtform, Sprechpuls, aktives Abrufen und Lernverse in Biologie, Deutsch, Mathematik, Physik und Geschichte. Die Werkstätten behalten ihre vollständigen D-Gram-Editoren und bisherigen Entwürfe. Das Wortspiel kann eine eigene erste Zeile als Wortfeld ergänzen, ohne bisherige Regeln zu ersetzen.
+
+Routen: `#clara/inspiration`, `#wartke/start`, `#schreiben/clara`, `#schreiben/wartke`, `#sammlung` und `#vergleich`. Alte Clara-Links und `/bodo/`-Links werden in die gemeinsame Navigation übernommen. Hörbeispiel-Direktlinks behalten ihre Grammatik und getrennten Entwurfskontexte.
+
+## Gemeinsame Sammlung und Sicherung
+
+Die Sammlung zeigt eigene Editorentwürfe und gespeicherte Grammatiken aus beiden bisherigen lokalen Journalen. Identische Einträge werden zusammengefasst. Beim Öffnen in einem anderen Zugang entsteht eine sicher benannte Kopie. Bestehende Journale werden nicht migriert oder überschrieben. «Gesamtes Journal sichern» exportiert beide Journale samt gemeinsamen Notizen; der Import prüft alle Teile vor einer bestätigten Übernahme und bietet vorher eine Sicherung an.
+
+`dist/index.html`, `studio.js`, `studio-core.js` und `studio.css` bilden die gemeinsame Oberfläche. Die vorhandenen Anwendungen laufen unter `clara.html` und `bodo/` in gleichursprünglichen, automatisch angepassten Frames. `unit-bridge.js` verbindet Navigation, Scrollposition und Schreibimpulse. Gemeinsame Daten bleiben lokal im Browser; es gibt keinen Synchronisationsserver.
+
+Unterrichtsplanungen: [Lösel](docs/unterricht.md), [Wartke](docs/bodo-unterricht.md). Eigene Übungsverse sind als solche gekennzeichnet. Originaltexte und Aufnahmen behalten ihre Quellen und werden nicht als freie Materialien ausgegeben.
 
 ## Direkt zwischen den Werkstätten übernehmen
 

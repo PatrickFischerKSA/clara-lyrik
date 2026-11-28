@@ -1,0 +1,3 @@
+.embedded-unit body{min-height:0!important;height:auto!important}.embedded-unit .resource-switch,.embedded-unit body>header,.embedded-unit body>footer{display:none!important}.embedded-unit main{min-height:0!important}.embedded-unit .shell>aside{position:static!important;height:auto!important;min-height:0!important}.embedded-unit .shell{align-items:start}.embedded-unit .workshop-bridge{display:none}.embedded-unit :is(#dgram-editor,#workshop-exchange){scroll-margin-top:10px}
+
+.embedded-unit dialog[open]{position:absolute;inset:auto 0 auto;top:calc(var(--studio-view-top,0px) + 20px);margin:0 auto;max-height:calc(var(--studio-view-height,700px) - 40px)}

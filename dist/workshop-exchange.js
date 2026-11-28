@@ -3,6 +3,8 @@ import {decodeJournal} from './bodo/core.js?v=1.1.0';
 import {namedGrammar,decodeLibrary,putGrammar} from './library.js?v=1.5.2';
 import {readWordFields,createWordField} from './wordfields.js?v=1.7.2';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let studioReceiver=null;
+if(typeof window!=='undefined')window.addEventListener('message',event=>{if(parent===window||event.source!==parent||event.origin!==location.origin||event.data?.type!=='lyrik:grammar')return;try{if(!studioReceiver?.root.isConnected)throw Error('Öffne zuerst den Regel-Editor.');const grammar=namedGrammar(event.data.grammar),result=copyExchangeGrammar(studioReceiver.getLibrary(),grammar);studioReceiver.onGrammar(result,true);studioReceiver.tell('«'+result.entry.name+'» aus der gemeinsamen Sammlung geöffnet.');parent.postMessage({type:'lyrik:grammar-opened'},location.origin);}catch(error){parent.postMessage({type:'lyrik:error',message:error.message},location.origin);}});
 export const EXCHANGE_KEYS={loesel:'zwischen-zeilen-v1',wartke:'wartke-form-gedaechtnis-v1'};
 export const exchangeHTML=()=>'<section id="workshop-exchange" class="workshop-exchange" tabindex="-1" aria-labelledby="exchange-title"></section>';
 
@@ -92,5 +94,6 @@ export function mountWorkshopExchange(root,{workshop,getCurrent,getLibrary,onGra
  $('#exchange-grammar-none').onclick=()=>{$('#exchange-grammars').querySelectorAll('[data-exchange-grammar]').forEach(input=>input.checked=false);updateGrammarSelection();};$('#exchange-open').onchange=updateGrammarSelection;
  $('#exchange-grammar').onclick=()=>{try{const indices=grammarIndices(),result=copyExchangeGrammars(getLibrary(),indices.map(i=>entries[i].grammar)),open=$('#exchange-open').checked,choice=Math.max(0,indices.indexOf(Number($('#exchange-open-choice').value))),entry=result.entries[choice];onGrammar({...result,entry},open);updateGrammarSelection();tell(`${result.entries.length} ${result.entries.length===1?'Grammatik übernommen':'Grammatiken gemeinsam übernommen'}: ${result.entries.map(e=>'«'+e.name+'»').join(', ')}.${open?' «'+entry.name+'» ist im Editor geöffnet.':' Du findest die Kopien in deiner Grammatikbibliothek.'}`);}catch(error){tell(error.message,true);}};
  $('#exchange-wordfield').onclick=()=>{try{const chosen=selection();if(!chosen.length)throw Error('Wähle mindestens ein Wortfeld aus.');const result=copyExchangeWordFields(getCurrent(),chosen,$('#exchange-begin').checked);onField(result);const names=result.mappings.map(m=>'«'+m.sourceName+'» als «'+m.fieldName+'»').join(', ');tell(`${result.fieldNames.length} ${result.fieldNames.length===1?'Wortfeld übernommen':'Wortfelder gemeinsam übernommen'}: ${names}.${$('#exchange-begin').checked?' Die neue Startregel erzeugt vier Zeilen. Erzeuge sie jetzt im Editor.':' Verwende die Feldnamen in deinen Regeln.'}`);}catch(error){tell(error.message,true);}};
+ studioReceiver={root,getLibrary,onGrammar,tell};
  refresh();
 }
