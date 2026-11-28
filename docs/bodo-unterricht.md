@@ -22,7 +22,7 @@ Die nächste Lektion beginnt mit einem erneuten Abruf und einer neuen Anwendungs
 
 ## D-Gram-Regel-Editor in der Schreibwerkstatt
 
-Über «Zum D-Gram-Regel-Editor» gelangt man innerhalb der Werkstatt zum Editor. Für jedes der fünf Fächer und ein eigenes Thema gibt es eine Beispielgrammatik mit kurzem Arbeitsauftrag, Formhinweis und fachlicher Quelle. Die Auswahl allein verändert keine Regeln. Beim Laden werden vorherige Regeln für eine Wiederherstellung aufgehoben.
+Über «Zum D-Gram-Regel-Editor» gelangt man innerhalb der Werkstatt zum Editor. Für die fünf Fächer, ein eigenes Thema und die zusätzlichen Höranschlüsse gibt es insgesamt neun Beispielgrammatiken mit kurzem Arbeitsauftrag, Formhinweis und fachlicher Quelle. Die Auswahl allein verändert keine Regeln. Beim Laden werden vorherige Regeln für eine Wiederherstellung aufgehoben.
 
 Die Beispiele verwenden Anaphern (ER und Golgi), Paarreime (Kasus und Prozentrechnung), Sinneinheiten (Wegstrecke und Zeit) sowie eine chronologische Folge (Bundesverfassungsdaten). Fachlich zusammengehörige Wörter und Aussagen bleiben in passenden Feldern oder festen Regeln verbunden. Die Beispiele zeigen unterschiedliche Möglichkeiten; nicht jede eigene Kombination erhält automatisch Reim, Grammatik oder fachliche Richtigkeit.
 
@@ -31,6 +31,21 @@ Wörter und ganze Wendungen lassen sich ohne Syntax ändern, ergänzen und entfe
 Eine Ableitung macht die gewählten Bausteine sichtbar. Eine Fassung mit genau vier ausgefüllten Zeilen lässt sich nach Bestätigung in die Versfelder des gewählten Faches übernehmen. Dabei werden vorhandene Verse ersetzt und die manuelle fachliche Prüfung zurückgesetzt. Ausgangsaussagen und Quelle bleiben erhalten und müssen mit der erzeugten Fassung verglichen werden. Änderungen an Regeln oder Wortfeldern sperren die Übernahme einer älteren Ausgabe bis zum erneuten Erzeugen.
 
 Der Editorinhalt bleibt für jeden Fachbereich erhalten. Die fachübergreifende eigene Grammatikbibliothek erlaubt benanntes Speichern, Wiederladen und JSON-Import und -Export. Gespeicherte Grammatiken dürfen auch unfertige Syntax enthalten. Das Dateiformat ist mit der Clara-Lösel-Werkstatt kompatibel. Importierte Namen erhalten bei Bedarf einen Zusatz; bestehende Einträge bleiben erhalten. Alle Grammatiken sind Teil des Wartke-Journals; ältere Journal-Sicherungen bleiben ladbar.
+
+### Vom Hörbeispiel direkt in den Editor
+
+Unter jedem Hörbeispiel stehen ein kurzer Schreibimpuls, der Name der passenden Grammatik und «Im Regel-Editor weiterschreiben». Der Link öffnet die Werkstatt direkt beim Editor, wählt das Beispiel vor und stellt zugehörige Fachangaben und Wortfelder bereit:
+
+| Hörbeispiel | Grammatik und Verfahren |
+| --- | --- |
+| Endoplasmatisches Retikulum | ER und Golgi · Anapher |
+| Mitochondrien | Membranen, Cristae, Matrix, ATP · wiederholter Auftakt |
+| Barbaras Rhabarberbar | Eigene Komposita · Grundwort und Bestimmungswort |
+| Dachdecker | Eigene Wortgruppen mit gleichem Anlaut · Alliteration |
+
+Die Links verwenden `#werkstatt?hoerbeispiel=er`, `mito`, `barbara` oder `dach` und können geteilt werden. Ein unbekannter Bezeichner öffnet die gewöhnliche Werkstatt. Jeder Höranschluss erhält einen eigenen lokalen Entwurf (`ws-hoeren-…` und `dg-hoeren-…`). Vorhandene Fachentwürfe und gespeicherte Grammatiken werden nicht überschrieben; beim Wiederkommen werden eigene Änderungen wieder angezeigt. Die neuen Beispiele sind eigenes Übungsmaterial, keine Transkripte der Originale.
+
+Zusätzliche Fachquellen sind [OpenStax zu Mitochondrien](https://openstax.org/books/biology-2e/pages/4-3-eukaryotic-cells), [IDS grammis zur Komposition](https://grammis.ids-mannheim.de/sgt/2245?termini=term) und [Universität Kiel zu Tropen und Figuren](https://www.klassalt.uni-kiel.de/de/studium/allgemeine-materialien-1/tropen-und-figuren). `listening-links.js` verbindet Medien, Beispielgrammatiken und eigene Schreibkontexte.
 
 ## Fachliche und didaktische Grenzen
 
